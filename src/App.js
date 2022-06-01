@@ -1,224 +1,303 @@
-import React, { Component } from 'react';
 import './App.css';
-import './Styles.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import SecondPage from './secondPage';
+import moment from 'moment';
 
-class App extends Component {
-  constructor() {
-    super();
+class App extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      patientInfo: [
-        {
-          patientName: "",
-          age: 0,
-          gender: "",
-          address: "",
-          patientWeight: 0,
-          patientBloodPressure: 0,
-          patientBodyTemperatute: 0,
-          timeOfVisit: "",
-          dateOfVisit: "",
-          presentComplaints: "",
-          pastHistory: "",
-          findings: "",
-          provisionalDiagnosis: ""
-        }
-      ],
-      treatmentAdviced: [
-        { medicine: "" },
-        { investigations: "" },
-        { physiotherapy: "" }
-      ],
-      review: ""
+      name: "",
+      age: "",
+      sex: "",
+      co: "",
+      weight: "",
+      bp: "",
+      temp: "",
+      time: "",
+      date: "",
+      presentComplaints: "",
+      pastHistory: "",
+      findings: "",
+      provDiagnosis: "",
+      doctorTab: true,
+      patientHistory: "",
+      medicinePageTab: false,
+      isHtn: false,
+      isDm: false,
+      isBa: false,
+      isCad: false,
+      isCkd: false,
+      isThyroid: false,
+      isDrug: false
     }
   }
-
-  handleInputChange = (e) => {
-    const target = e.target;
-    const name = target.name;
-    const value = target.value;
-    var newPatientInfoArray = [...this.state.patientInfo];
-    switch (name) {
-      case ("patientName"):
-        newPatientInfoArray[0].patientName = value;
-        break;
-      case ("age"):
-        newPatientInfoArray[0].age = value;
-        break;
-      case ("gender"):
-        newPatientInfoArray[0].gender = value;
-        break;
-      case ("address"):
-        newPatientInfoArray[0].address = value;
-        break;
-      case ("patientWeight"):
-        newPatientInfoArray[0].patientWeight = value;
-        break;
-      case ("patientBloodPressure"):
-        newPatientInfoArray[0].patientBloodPressure = value;
-        break;
-      case ("patientBodyTemperatute"):
-        newPatientInfoArray[0].patientBodyTemperatute = value;
-        break;
-      case ("timeOfVisit"):
-        newPatientInfoArray[0].timeOfVisit = value;
-        break;
-      case ("dateOfVisit"):
-        newPatientInfoArray[0].dateOfVisit = value;
-        break;
-      case ("presentComplaints"):
-        newPatientInfoArray[0].presentComplaints = value;
-        break;
-      case ("pastHistory"):
-        newPatientInfoArray[0].pastHistory = value;
-        break;
-      case ("findings"):
-        newPatientInfoArray[0].findings = value;
-        break;
-      case ("provisionalDiagnosis"):
-        newPatientInfoArray[0].provisionalDiagnosis = value;
-        break;
-      default: ;
-    }
-
-    console.log(e)
-    this.setState({
-      patientInfo: newPatientInfoArray
-    }, console.log(this.state))
+  onChangeInput = (e) => {
+    const { name, value } = e.target
+    this.setState({ [name]: value });
+  }
+  onChangeHtn = () => {
+    this.setState(initialState => ({
+      isHtn: !initialState.isHtn,
+    }));
+  }
+  onChangeDm = () => {
+    this.setState(initialState => ({
+      isDm: !initialState.isDm,
+    }));
+  }
+  onChangeBa = () => {
+    this.setState(initialState => ({
+      isBa: !initialState.isBa,
+    }));
+  }
+  onChangeCad = () => {
+    this.setState(initialState => ({
+      isCad: !initialState.isCad,
+    }));
+  }
+  onChangeCkd = () => {
+    this.setState(initialState => ({
+      isCkd: !initialState.isCkd,
+    }));
+  }
+  onChangeThyroid = () => {
+    this.setState(initialState => ({
+      isThyroid: !initialState.isThyroid,
+    }));
+  }
+  onChangeDrug = () => {
+    this.setState(initialState => ({
+      isDrug: !initialState.isDrug,
+    }));
   }
 
+  handleSubmit = () => {
+    const state = this.state;
+    const userData = {
+      patientName: state.name,
+      age: state.age,
+      sex: state.sex,
+      co: state.co,
+      weight: state.weight,
+      bp: state.bp,
+      temp: state.temp,
+      time: state.time,
+      date: state.date,
+      presentComplaints: state.presentComplaints,
+      pastHistory: state.pastHistory,
+      findings: state.findings,
+      provDiagnosis: state.provDiagnosis,
+      isHtn: state.isHtn,
+      isDm: state.isDm,
+      isBa: state.isBa,
+      isCad: state.isCad,
+      isCkd: state.isCkd,
+      isThyroid: state.isThyroid,
+      isDrug: state.isDrug
+    }
+    this.setState({ patientHistory: userData, doctorTab: false, medicinePageTab: true });
+  }
   render() {
-    //var arrayName;
-    return (<form>
-      <div className='name-age-gender'>
-        <label className='name'>
-          Name:
-          <input
-            name="patientName"
-            type="text"
-            value={this.state.patientInfo.patientName}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='age'>
-          Age:
-          <input
-            name="age"
-            type="number"
-            value={this.state.patientInfo.age}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='gender'>
-          Gender:
-          <input type="radio" className="radioButton" name="gender" value="Male" onChange={(e) => this.handleInputChange(e)}></input>
-          <label className=""><i className="fas fa-male"></i></label>
-          <input type="radio" className="radioButton" name="gender" value="Female" onChange={(e) => this.handleInputChange(e)}></input>
-          <label className=""><i className="fas fa-female"></i></label>
-        </label>
-      </div>
-      <div className='address-weight-bp'>
-        <label className='address'>
-          Address:
-          <input
-            name="address"
-            type="text"
-            value={this.state.patientInfo.address}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='weight'>
-          Weight:
-          <input
-            name="patientWeight"
-            type="number"
-            value={this.state.patientInfo.patientWeight}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='bp'>
-          Blood Pressure:
-          <input
-            name="patientBloodPressure"
-            type="number"
-            value={this.state.patientInfo.patientBloodPressure}
-            onChange={this.handleInputChange} />
-        </label>
-      </div>
-      <div className='temp-time-date'>
-        <label className='temp'>
-          Body Temperature:
-          <input
-            name="patientBodyTemperatute"
-            type="number"
-            value={this.state.patientInfo.patientBodyTemperatute}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='time'>
-          Visited At:
-          <input
-            name="timeOfVisit"
-            type="time"
-            value={this.state.patientInfo.timeOfVisit}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='date'>
-          Visited on:
-          <input
-            name="dateOfVisit"
-            type="date"
-            value={this.state.patientInfo.dateOfVisit}
-            onChange={this.handleInputChange} />
-        </label>
-      </div>
-      <div className='complaint-history-findings'>
-        <label className='complaint'>
-          Present Complaints and Duration:
-          <textarea
-            name="presentComplaints"
-            type="text"
-            value={this.state.patientInfo.presentComplaints}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='history'>
-          Past History:
-          <textarea
-            name="pastHistory"
-            type="text"
-            value={this.state.patientInfo.pastHistory}
-            onChange={this.handleInputChange} />
-        </label>
-        <label className='findings'>
-          Findings:
-          <textarea
-            name="findings"
-            type="text"
-            value={this.state.patientInfo.findings}
-            onChange={this.handleInputChange} />
-        </label>
-      </div>
-      <label className='diagnosis'>
-        Provisional Diagnosis:
-        <textarea
-          name="provisionalDiagnosis"
-          type="text"
-          value={this.state.patientInfo.provisionalDiagnosis}
-          onChange={this.handleInputChange} />
-      </label>
-      {/*<label>
-      Is going:
-      <input
-        name="isGoing"
-        type="checkbox"
-        checked={this.state.isGoing}
-        onChange={this.handleInputChange} />
-    </label>
-    <br />
-    <label>
-      Number of guests:
-      <input
-        name="numberOfGuests"
-        type="number"
-        value={this.state.numberOfGuests}
-        onChange={this.handleInputChange} />
-    </label>*/}
-    </form>
+    const date = moment(new Date()).format('YYYY-MM-DD');
+    return (
+      <>
+        {this.state.doctorTab && (
+          <div className='App container'>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Patient Name:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="name" value={this.state.name} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Age:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="age" value={this.state.age} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label className='sex'>
+                  Sex:
+                </label>
+              </div>
+              <div className="col-3">
+                <input type="radio" className="radioButton" name="sex" value="M" onChange={(e) => this.onChangeInput(e)}></input>
+                <label className=""><i className="fas fa-male"></i></label>
+                <input type="radio" className="radioButton" name="sex" value="F" onChange={(e) => this.onChangeInput(e)}></input>
+                <label className=""><i className="fas fa-female"></i></label>
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>C/o:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="co" value={this.state.co} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Weight:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="weight" value={this.state.weight} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>B.P:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="bp" value={this.state.bp} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Temp.:</label>
+              </div>
+              <div className="col-8">
+                <input type="text" name="temp" value={this.state.temp} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Time:</label>
+              </div>
+              <div className="col-8">
+                <input type="time" name="time" value={this.state.time} onChange={this.onChangeInput} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Date:</label>
+              </div>
+              <div className="col-8">
+                <input type="date" name="date" value={this.state.date} onChange={this.onChangeInput} min={date} />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Present Complaints with Duration:</label>
+              </div>
+              <div className="col-8">
+                <textarea name="presentComplaints" value={this.state.presentComplaints} onChange={this.onChangeInput} rows="5" cols="35" />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Past History:</label>
+              </div>
+              <div className="col-8">
+                <textarea name="pastHistory" value={this.state.pastHistory} onChange={this.onChangeInput} rows="5" cols="35" />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Findings:</label>
+              </div>
+              <div className="col-8">
+                <textarea name="findings" value={this.state.findings} onChange={this.onChangeInput} rows="5" cols="35" />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-4">
+                <label>Provisional Diagnosis:</label>
+              </div>
+              <div className="col-8">
+                <textarea name="provDiagnosis" value={this.state.provDiagnosis} onChange={this.onChangeInput} rows="5" cols="35" />
+              </div>
+            </div>
+            <div className="input_fields row">
+              <div className="col-1">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isHtn}
+                    onChange={this.onChangeHtn}
+                    className="form-check-input pr-2"
+                  />
+                  HTN
+                </label>
+              </div>
+              <div className="col-1">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isDm}
+                    onChange={this.onChangeDm}
+                    className="form-check-input pr-2"
+                  />
+                  DM
+                </label>
+              </div>
+              <div className="col-1">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isBa}
+                    onChange={this.onChangeBa}
+                    className="form-check-input pr-2"
+                  />
+                  BA
+                </label>
+              </div>
+              <div className="col-1">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isCad}
+                    onChange={this.onChangeCad}
+                    className="form-check-input pr-2"
+                  />
+                  CAD
+                </label>
+              </div>
+              <div className="col-1">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isCkd}
+                    onChange={this.onChangeCkd}
+                    className="form-check-input pr-2"
+                  />
+                  CKD
+                </label>
+              </div>
+              <div className="col-3">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isThyroid}
+                    onChange={this.onChangeThyroid}
+                    className="form-check-input pr-2"
+                  />
+                  THYROID DISAORDER
+                </label>
+              </div>
+              <div className="col-3">
+                <label className="form-check-label">
+                  <input type="checkbox"
+                    checked={this.state.isDrug}
+                    onChange={this.onChangeDrug}
+                    className="form-check-input pr-2"
+                  />
+                  DRUG ALLERGIES
+                </label>
+              </div>
+            </div>
+            <div className="row">
+              <button onClick={this.handleSubmit}>Next</button>
+            </div>
+          </div>
+        )}
+        {this.state.medicinePageTab && (
+          <SecondPage patientHistory={this.state.patientHistory} />
+        )}
+      </>
     )
   }
 }
+
 export default App;
