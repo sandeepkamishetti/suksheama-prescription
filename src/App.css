@@ -1,0 +1,261 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input_fields {
+  padding: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+input {
+  width: 35%;
+}
+
+.letter-head {
+  /* background: url('./letter-head.jpg'); */
+  width: 20.7cm;
+  height: 29.6cm;
+  /* background-size: 100%; */
+}
+
+.patient-data-head {
+  position: relative;
+  top: 5.8cm;
+  font-weight: bold;
+}
+
+.age {
+  width: 85px !important;
+  margin-left: 24px;
+}
+
+.header-2-data {
+  margin-top: 1cm !important;
+}
+
+.second-row {
+  margin-left: -40px;
+}
+
+.second-column {
+  margin-left: 24px;
+}
+
+.present-complaints {
+  width: 14.5cm;
+  height: 3.5cm;
+}
+
+.right-side-data {
+  left: 5.5cm;
+  position: relative;
+  top: 3.2cm;
+}
+
+.past-history {
+  margin-top: 0.5cm;
+  width: 14.5cm;
+  height: 3.5cm;
+}
+
+.findings {
+  margin-top: 0.5cm;
+  width: 14.5cm;
+  height: 3.5cm;
+}
+
+.provisional {
+  margin-top: 0.5cm;
+  width: 14.5cm;
+  height: 5cm;
+}
+
+.fa-female {
+  color: green;
+}
+
+.fa-male {
+  color: red;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.letter-head-back {
+  /* background: url('./letter-head-backside.jpg'); */
+  width: 20.7cm;
+  height: 29.6cm;
+  /* background-size: 100%; */
+}
+
+.medicine-data-head {
+  position: relative;
+  top: 207px;
+  left: 90px;
+  font-weight: bold;
+}
+
+.check-mark {
+  width: 37px !important;
+}
+
+.col-1.check-mark {
+  flex: 0 0 auto;
+  width: 6.5%;
+}
+
+.medicine {
+  height: 37px;
+}
+
+.med1 {
+  height: 37px;
+}
+
+.diet {
+  margin-top: 35px !important;
+  height: 50px;
+  width: 623px !important;
+  margin-left: 16px !important;
+}
+
+.investigations {
+  margin-top: 20px !important;
+  margin-left: -30px !important;
+  height: 290px;
+}
+
+.review {
+  margin-top: 20px !important;
+  margin-left: -30px !important;
+  height: 90px;
+}
+
+.checkbox-area {
+  left: 6.5cm;
+  position: relative;
+  top: 0.8cm;
+}
+
+.date {
+  margin-left: 140px;
+  margin-top: 8px;
+}
+
+.p-name {
+  width: 10cm !important;
+}
+
+.weight {
+  width: 3cm !important;
+}
+
+.bp {
+  width: 3.5cm !important;
+}
+
+.time {
+  width: 4.5cm !important;
+}
+
+.date2 {
+  width: 3cm !important;
+}
+
+.header-sec {
+  margin-left: 2.8cm !important;
+}
+
+.age-value {
+  width: 2.3cm !important;
+}
+
+.sex {
+  width: 1.5cm !important;
+}
+
+.co {
+  width: 3cm !important;
+}
+
+.header-sec2 {
+  margin-left: 2.5cm !important;
+}
+
+.htn {
+  width: 2cm !important;
+}
+
+.dm {
+  width: 1.6cm !important;
+}
+
+.ba {
+  width: 2cm !important;
+}
+
+.cad {
+  width: 1.7cm !important;
+}
+
+.ckd {
+  width: 2.5cm !important;
+}
+
+.thyroid {
+  width: 2.7cm !important;
+}
+
+.drug {
+  width: 1cm !important;
+}
+
+.medicine-name {
+  width: 340px !important;
+}
+.duration {
+  width: 85px !important;
+}
+.med-name {
+  width: 642px !important;
+}
