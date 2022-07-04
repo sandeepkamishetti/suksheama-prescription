@@ -25,7 +25,7 @@ class LetterHead extends React.Component {
                         <div className="col-1 age">
                             {patientInfo ? patientInfo.age : ""}
                         </div>
-                        <div className="col-1 age">
+                        <div className="col-1 sex">
                             {patientInfo ? patientInfo.sex : ""}
                         </div>
                         <div className="col-1">

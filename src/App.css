@@ -184,3 +184,22 @@ input {
   margin-left: 140px;
   margin-top: 8px;
 }
+
+.col-5{ /*Sandeep's changes*/
+  width: 50.666667% !important;
+}
+
+.col-1{ /*Sandeep's changes*/
+  width: 13.333333% !important;
+}
+
+.col-2{ /*Sandeep's changes*/
+  width: 19.666667% !important;
+}
+
+.row>*{ /*Sandeep's changes*/
+  padding: 0x !important;
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+
