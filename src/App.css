@@ -161,13 +161,13 @@ input {
 }
 
 .diet {
-  margin-top: 60px !important;  /*Sandeep's changes*/
+  margin-top: 80px !important;  /*Sandeep's changes*/
   height: 50px;
-  margin-left: -90px !important;  /*Sandeep's changes*/
+  margin-left: -70px !important;  /*Sandeep's changes*/
 }
 
 .investigations {
-  margin-top: 30px !important;
+  margin-top: 45px !important;
   margin-left: -30px !important;
   height: 290px;
 }
@@ -185,12 +185,12 @@ input {
 }
 
 .date {  /*Sandeep's changes*/
-  margin-left: 400px;
-  margin-top: 4px;
+  margin-left: 485px;
+  margin-top: -4px;
 }
 
 .time{  /*Sandeep's changes*/
-  margin-left: 400px;
+  margin-left: 485px;
   margin-top: 4px;
   width: 100%;
 }
