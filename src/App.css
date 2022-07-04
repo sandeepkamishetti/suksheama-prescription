@@ -112,6 +112,10 @@ input {
   height: 115px;
 }
 
+.fas{
+  font-size: 30px; /*Sandeep's changes*/
+}
+
 .fa-female {
   color: green;
 }
