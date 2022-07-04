@@ -52,25 +52,25 @@ class LetterHead extends React.Component {
                     </div>
                     <div className="checkbox-area">
                         <div className="row">
-                            <div className="col-1">
+                            <div className="col3">
                                 {patientInfo.isHtn === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-1">
+                            <div className="col3">
                                 {patientInfo.isDm === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-1">
+                            <div className="col3">
                                 {patientInfo.isBa === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-1">
+                            <div className="col3">
                                 {patientInfo.isCad === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-1">
+                            <div className="col3">
                                 {patientInfo.isCkd === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-2">
+                            <div className="col3">
                                 {patientInfo.isThyroid === true ? <i className="fas fa-check"></i> : ""}
                             </div>
-                            <div className="col-2">
+                            <div className="col3">
                                 {patientInfo.isDrug === true ? <i className="fas fa-check"></i> : ""}
                             </div>
                         </div>

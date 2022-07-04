@@ -67,7 +67,7 @@ input {
 }
 
 .age {
-  margin-left: 24px;
+  margin-left: 40px; /*Sandeep's changes*/ 
 }
 
 .header-2-data {
@@ -79,7 +79,7 @@ input {
 }
 
 .second-column {
-  margin-left: 24px;
+  margin-left: 53px;/*Sandeep's changes*/
 }
 
 .present-complaints {
@@ -91,7 +91,7 @@ input {
 .right-side-data {
   left: 105px;
   position: relative;
-  top: 190px;
+  top: 100px;
 }
 
 .past-history {
@@ -107,7 +107,7 @@ input {
 }
 
 .provisional {
-  margin-top: 60px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
@@ -195,7 +195,7 @@ input {
 }
 
 .col-1{ /*Sandeep's changes*/
-  width: 13.333333% !important;
+  width: 14.333333% !important;
 }
 
 .col-2{ /*Sandeep's changes*/
@@ -203,8 +203,13 @@ input {
 }
 
 .row>*{ /*Sandeep's changes*/
-  padding: 0x !important;
-  margin-top: -15px;
-  margin-bottom: 30px;
+  padding: 0px !important;
+  margin-top: -15px !important;
+  margin-bottom: 30px !important;
 }
 
+.col3{/*Sandeep's changes*/
+  width: 13.333333%!important;
+  flex: 0 0 auto;
+
+}

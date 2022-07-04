@@ -273,7 +273,7 @@ class App extends React.Component {
                     onChange={this.onChangeThyroid}
                     className="form-check-input pr-2"
                   />
-                  THYROID DISAORDER
+                  THYROID DISORDER
                 </label>
               </div>
               <div className="col-3">
