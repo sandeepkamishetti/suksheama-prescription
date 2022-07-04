@@ -143,10 +143,6 @@ input {
   font-weight: bold;
 }
 
-.check-mark {
-  margin-left: -15px;
-}
-
 .col-1.check-mark {
   flex: 0 0 auto;
   width: 6.5%;
@@ -155,27 +151,30 @@ input {
 .medicine {
   margin-top: 15px !important;
   height: 25px;
+  width: 80%;  /*Sandeep's changes*/
 }
 
 .med1 {
   height: 25px;
+  margin-top: 25px !important;  /*Sandeep's changes*/
+  width: 80%;  /*Sandeep's changes*/
 }
 
 .diet {
-  margin-top: 23px !important;
+  margin-top: 60px !important;  /*Sandeep's changes*/
   height: 50px;
-  margin-left: 16px !important;
+  margin-left: -90px !important;  /*Sandeep's changes*/
 }
 
 .investigations {
-  margin-top: 20px !important;
+  margin-top: 30px !important;
   margin-left: -30px !important;
   height: 290px;
 }
 
 .review {
-  margin-top: 20px !important;
-  margin-left: -30px !important;
+  margin-top: 100px !important;
+  margin-left: -25px !important;
   height: 90px;
 }
 
@@ -185,9 +184,15 @@ input {
   top: 45px;
 }
 
-.date {
-  margin-left: 140px;
-  margin-top: 8px;
+.date {  /*Sandeep's changes*/
+  margin-left: 400px;
+  margin-top: 4px;
+}
+
+.time{  /*Sandeep's changes*/
+  margin-left: 400px;
+  margin-top: 4px;
+  width: 100%;
 }
 
 .col-5{ /*Sandeep's changes*/
@@ -211,5 +216,18 @@ input {
 .col3{/*Sandeep's changes*/
   width: 13.333333%!important;
   flex: 0 0 auto;
+}
 
+.col-6{ /*Sandeep's changes*/
+ /* width: 19.666667% !important;*/
+  margin-top: 0px !important;
+}
+
+.check-mark {  /*Sandeep's changes*/
+  margin-left: 0px;
+  width: 7.33333% !important;
+}
+
+.dur{  /*Sandeep's changes*/
+  width: 1.666667% !important;
 }

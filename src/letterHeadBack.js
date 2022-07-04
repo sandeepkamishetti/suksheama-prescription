@@ -43,7 +43,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood1 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration1}
                         </div>
                     </div>
@@ -69,7 +69,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood2 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration2}
                         </div>
                     </div>
@@ -95,7 +95,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood3 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration3}
                         </div>
                     </div>
@@ -121,7 +121,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood4 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration4}
                         </div>
                     </div>
@@ -147,7 +147,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood5 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration5}
                         </div>
                     </div>
@@ -173,7 +173,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-1 check-mark">
                             {medicinesInfo.isAfterNightFood6 === true ? <i className="fas fa-check"></i> : ""}
                         </div>
-                        <div className="col-2">
+                        <div className="col-2 dur">
                             {medicinesInfo.duration6}
                         </div>
                     </div>
@@ -206,7 +206,7 @@ class LetterHeadBack extends React.Component {
                         </div>
                         <div className="col-5">
                             <div className="date">{date}</div>
-                            <div className="date">{time}</div>
+                            <div className="time">{time.toUpperCase()}</div>
                         </div>
                     </div>
                 </div>
