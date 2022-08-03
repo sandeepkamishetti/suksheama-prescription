@@ -31,7 +31,8 @@ class App extends React.Component {
       isCad: false,
       isCkd: false,
       isThyroid: false,
-      isDrug: false
+      isDrug: false,
+      userLoggedIn: false
     }
   }
   onChangeInput = (e) => {

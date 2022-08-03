@@ -479,21 +479,21 @@ class SecondPage extends React.Component {
                                     <div className="col-6">
                                         <label className="form-check-label">
                                             <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood1}
-                                                onChange={this.onChangeAfterMorningFood1}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood1}
                                                 onChange={this.onChangeBeforeMorningFood1}
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood1}
+                                                onChange={this.onChangeAfterMorningFood1}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -506,21 +506,21 @@ class SecondPage extends React.Component {
                                     <div className="col-6">
                                         <label className="form-check-label">
                                             <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood1}
-                                                onChange={this.onChangeAfterAfternoonFood1}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood1}
                                                 onChange={this.onChangeBeforeAfternoonFood1}
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood1}
+                                                onChange={this.onChangeAfterAfternoonFood1}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -533,21 +533,21 @@ class SecondPage extends React.Component {
                                     <div className="col-6">
                                         <label className="form-check-label">
                                             <input type="checkbox"
-                                                checked={this.state.isAfterNightFood1}
-                                                onChange={this.onChangeAfterNightFood1}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood1}
                                                 onChange={this.onChangeBeforeNightFood1}
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood1}
+                                                onChange={this.onChangeAfterNightFood1}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -576,16 +576,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood2}
-                                                onChange={this.onChangeAfterMorningFood2}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood2}
@@ -593,6 +584,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood2}
+                                                onChange={this.onChangeAfterMorningFood2}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -603,16 +604,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood2}
-                                                onChange={this.onChangeAfterAfternoonFood2}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood2}
@@ -620,6 +612,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood2}
+                                                onChange={this.onChangeAfterAfternoonFood2}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -630,16 +632,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterNightFood2}
-                                                onChange={this.onChangeAfterNightFood2}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood2}
@@ -647,6 +640,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood2}
+                                                onChange={this.onChangeAfterNightFood2}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -675,16 +678,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood3}
-                                                onChange={this.onChangeAfterMorningFood3}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood3}
@@ -692,6 +686,17 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood3}
+                                                onChange={this.onChangeAfterMorningFood3}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -702,16 +707,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood3}
-                                                onChange={this.onChangeAfterAfternoonFood3}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood3}
@@ -719,6 +715,17 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood3}
+                                                onChange={this.onChangeAfterAfternoonFood3}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -729,16 +736,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterNightFood3}
-                                                onChange={this.onChangeAfterNightFood3}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood3}
@@ -746,6 +744,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood3}
+                                                onChange={this.onChangeAfterNightFood3}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -776,21 +784,22 @@ class SecondPage extends React.Component {
                                     <div className="col-6">
                                         <label className="form-check-label">
                                             <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood4}
-                                                onChange={this.onChangeAfterMorningFood4}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood4}
                                                 onChange={this.onChangeBeforeMorningFood4}
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood4}
+                                                onChange={this.onChangeAfterMorningFood4}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -801,16 +810,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood4}
-                                                onChange={this.onChangeAfterAfternoonFood4}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood4}
@@ -818,6 +818,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood4}
+                                                onChange={this.onChangeAfterAfternoonFood4}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -828,16 +838,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterNightFood4}
-                                                onChange={this.onChangeAfterNightFood4}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood4}
@@ -845,6 +846,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood4}
+                                                onChange={this.onChangeAfterNightFood4}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -874,16 +885,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood5}
-                                                onChange={this.onChangeAfterMorningFood5}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood5}
@@ -891,6 +893,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood5}
+                                                onChange={this.onChangeAfterMorningFood5}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -901,16 +913,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood5}
-                                                onChange={this.onChangeAfterAfternoonFood5}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood5}
@@ -918,6 +921,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood5}
+                                                onChange={this.onChangeAfterAfternoonFood5}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -928,16 +941,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterNightFood5}
-                                                onChange={this.onChangeAfterNightFood5}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood5}
@@ -945,6 +949,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood5}
+                                                onChange={this.onChangeAfterNightFood5}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -973,16 +987,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterMorningFood6}
-                                                onChange={this.onChangeAfterMorningFood6}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeMorningFood6}
@@ -990,6 +995,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterMorningFood6}
+                                                onChange={this.onChangeAfterMorningFood6}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -1000,16 +1015,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterAfternoonFood6}
-                                                onChange={this.onChangeAfterAfternoonFood6}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeAfternoonFood6}
@@ -1017,6 +1023,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterAfternoonFood6}
+                                                onChange={this.onChangeAfterAfternoonFood6}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
@@ -1027,16 +1043,7 @@ class SecondPage extends React.Component {
                                 </label>
                                 <div className="row">
                                     <div className="col-6">
-                                        <label className="form-check-label">
-                                            <input type="checkbox"
-                                                checked={this.state.isAfterNightFood6}
-                                                onChange={this.onChangeAfterNightFood6}
-                                                className="form-check-input pr-2"
-                                            />
-                                            After Food
-                                        </label>
-                                    </div>
-                                    <div className="col-6">
+
                                         <label className="form-check-label">
                                             <input type="checkbox"
                                                 checked={this.state.isBeforeNightFood6}
@@ -1044,6 +1051,16 @@ class SecondPage extends React.Component {
                                                 className="form-check-input pr-2"
                                             />
                                             Before Food
+                                        </label>
+                                    </div>
+                                    <div className="col-6">
+                                        <label className="form-check-label">
+                                            <input type="checkbox"
+                                                checked={this.state.isAfterNightFood6}
+                                                onChange={this.onChangeAfterNightFood6}
+                                                className="form-check-input pr-2"
+                                            />
+                                            After Food
                                         </label>
                                     </div>
                                 </div>
