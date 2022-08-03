@@ -209,9 +209,8 @@ input {
 
 .row>*{ /*Sandeep's changes*/
   padding: 0px !important;
-  margin-top: 0px !important;
+  margin-top: -15px !important;
   margin-bottom: 30px !important;
-  flex-wrap: nowrap !important;
 }
 
 .col3{/*Sandeep's changes*/
@@ -230,5 +229,5 @@ input {
 }
 
 .dur{  /*Sandeep's changes*/
-  width: 8.666667% !important;
+  width: 1.666667% !important;
 }
