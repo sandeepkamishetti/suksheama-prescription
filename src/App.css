@@ -149,7 +149,7 @@ input {
 }
 
 .medicine {
-  margin-top: 15px !important;
+  margin-top: 30px !important; /*Sandeep's changes*/
   height: 25px;
   width: 80%;  /*Sandeep's changes*/
 }
@@ -161,7 +161,7 @@ input {
 }
 
 .diet {
-  margin-top: 80px !important;  /*Sandeep's changes*/
+  margin-top: 40px !important;  /*Sandeep's changes*/
   height: 50px;
   margin-left: -70px !important;  /*Sandeep's changes*/
 }
@@ -173,7 +173,7 @@ input {
 }
 
 .review {
-  margin-top: 100px !important;
+  margin-top: 85px !important;
   margin-left: -25px !important;
   height: 90px;
 }
@@ -230,4 +230,9 @@ input {
 
 .dur{  /*Sandeep's changes*/
   width: 1.666667% !important;
+}
+
+
+.physio{ /*Sandeep's changes*/
+  margin-left: 50px;
 }

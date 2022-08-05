@@ -196,7 +196,7 @@ class LetterHeadBack extends React.Component {
                         <div className="col-5">
                             {medicinesInfo.invAdviced}
                         </div>
-                        <div className="col-5">
+                        <div className="col-4 physio">
                             {medicinesInfo.phyAdviced}
                         </div>
                     </div>
