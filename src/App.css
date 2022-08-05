@@ -149,16 +149,16 @@ input {
 }
 
 .medicine {
-  margin-top: 30px !important; /*Sandeep's changes*/
+  margin-top: 20px !important; /*Sandeep's changes*/
   height: 25px;
-  width: 80%;  /*Sandeep's changes*/
+  width: 77%;  /*Sandeep's changes*/
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
 }
 
 .med1 {
   height: 25px;
   margin-top: 25px !important;  /*Sandeep's changes*/
-  width: 80%;  /*Sandeep's changes*/
+  width: 77%;  /*Sandeep's changes*/
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
 }
 
@@ -170,7 +170,7 @@ input {
 
 .investigations {
   margin-top: 45px !important;
-  margin-left: -30px !important;
+  margin-left: -150px !important;
   height: 290px;
 }
 
@@ -188,12 +188,12 @@ input {
 
 .date {  /*Sandeep's changes*/
   margin-left: 50px;
-  margin-top: -4px;
+  margin-top: 5px;
 }
 
 .time{  /*Sandeep's changes*/
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
 }
 
@@ -236,5 +236,6 @@ input {
 
 
 .physio{ /*Sandeep's changes*/
-  margin-left: 50px;
+  margin-left: 60px;
+  width: 43% !important;
 }
