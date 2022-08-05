@@ -169,8 +169,9 @@ input {
 }
 
 .investigations {
+  display: block;   /*Sandeep's changes*/
   margin-top: 45px !important;
-  margin-left: -150px !important;
+  margin-left: -130px !important;
   height: 290px;
 }
 
@@ -187,12 +188,12 @@ input {
 }
 
 .date {  /*Sandeep's changes*/
-  margin-left: 50px;
-  margin-top: 5px;
+  margin-left: 60px;
+  margin-top: 10px;
 }
 
 .time{  /*Sandeep's changes*/
-  margin-left: 50px;
+  margin-left: 60px;
   margin-top: 15px;
   width: 100%;
 }
@@ -232,10 +233,16 @@ input {
 
 .dur{  /*Sandeep's changes*/
   width: 12% !important;
-}
+} 
 
 
 .physio{ /*Sandeep's changes*/
-  margin-left: 60px;
-  width: 43% !important;
+  float: right;
+  margin-left: 30px;
+  width: 38% !important;
+}
+
+.investigate{ /*Sandeep's changes*/
+  width: 430px !important;
+
 }
