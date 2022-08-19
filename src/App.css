@@ -71,7 +71,8 @@ input {
 }
 
 .header-2-data {
-  margin-top: 13px !important;
+  margin-top: 8px !important;
+ margin-left: -30px !important;
 }
 
 .second-row {
@@ -85,7 +86,7 @@ input {
 .present-complaints {
   width: 550px;
   height: 115px;
-  margin-top: 60px;/*Sandeep's changes*/
+  margin-top: 25px;/*Sandeep's changes*/
 }
 
 .right-side-data {
@@ -95,25 +96,25 @@ input {
 }
 
 .past-history {
-  margin-top: 70px;/*Sandeep's changes*/
+  margin-top: 75px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .findings {
-  margin-top: 80px;/*Sandeep's changes*/
+  margin-top: 90px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .provisional {
-  margin-top: 100px;/*Sandeep's changes*/
+  margin-top: 90px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .fas{
-  font-size: 30px; /*Sandeep's changes*/
+  font-size: 20px; /*Sandeep's changes*/
 }
 
 .fa-female {
@@ -163,14 +164,14 @@ input {
 }
 
 .diet {
-  margin-top: 40px !important;  /*Sandeep's changes*/
+  margin-top: 50px !important;  /*Sandeep's changes*/
   height: 50px;
   margin-left: -70px !important;  /*Sandeep's changes*/
 }
 
 .investigations {
   display: block;   /*Sandeep's changes*/
-  margin-top: 45px !important;
+  margin-top: 35px !important;
   margin-left: -130px !important;
   height: 290px;
 }
@@ -182,9 +183,9 @@ input {
 }
 
 .checkbox-area {
-  left: 154px;
+  left: 140px;  /*Sandeep's change*/
   position: relative;
-  top: 45px;
+  top: 15px;
 }
 
 .date {  /*Sandeep's changes*/
@@ -217,7 +218,7 @@ input {
 }
 
 .col3{/*Sandeep's changes*/
-  width: 13.333333%!important;
+  width: 11%!important;
   flex: 0 0 auto;
 }
 
@@ -235,6 +236,13 @@ input {
   width: 12% !important;
 } 
 
+.isTd{  /*Sandeep's changes*/
+  margin-left: 20px;
+}
+
+.isDa{  /*Sandeep's changes*/
+  margin-left: 50px;
+}
 
 .physio{ /*Sandeep's changes*/
   float: right;
@@ -244,5 +252,13 @@ input {
 
 .investigate{ /*Sandeep's changes*/
   width: 430px !important;
+}
 
+.careOf{ /*Sandeep's changes*/
+  margin-left: -46px !important;
+  font-size: 11px;
+}
+
+.hideCheckMark{ /*Sandeep's changes*/
+  visibility: hidden;
 }

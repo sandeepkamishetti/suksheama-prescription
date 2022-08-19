@@ -28,7 +28,7 @@ class LetterHead extends React.Component {
                         <div className="col-1 sex">
                             {patientInfo ? patientInfo.sex : ""}
                         </div>
-                        <div className="col-1">
+                        <div className="col-1 careOf">
                             {patientInfo ? patientInfo.co : ""}
                         </div>
                     </div>
@@ -53,25 +53,25 @@ class LetterHead extends React.Component {
                     <div className="checkbox-area">
                         <div className="row">
                             <div className="col3">
-                                {patientInfo.isHtn === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isHtn === true ? <i className="fas fa-check"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isDm === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isDm === true ? <i className="fas fa-check"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isBa === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isBa === true ? <i className="fas fa-check"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isCad === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isCad === true ? <i className="fas fa-check"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isCkd === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isCkd === true ? <i className="fas fa-check"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isThyroid === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isThyroid === true ? <i className="fas fa-check isTd"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                             <div className="col3">
-                                {patientInfo.isDrug === true ? <i className="fas fa-check"></i> : ""}
+                                {patientInfo.isDrug === true ? <i className="fas fa-check isDa"></i> : <i className="fas fa-check hideCheckMark"></i>}
                             </div>
                         </div>
                     </div>
