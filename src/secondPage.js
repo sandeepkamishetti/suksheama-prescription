@@ -1128,7 +1128,7 @@ class SecondPage extends React.Component {
                         </div>
                     </div>
                 )}
-                {this.state.letterHeadTab && (
+                {this.state.letterHeadTab  && (
                     <>
                         <LetterHead medicinesHistory={this.state.medicinesHistory} ref={el => (this.componentRef = el)} />
                         <ReactToPrint
