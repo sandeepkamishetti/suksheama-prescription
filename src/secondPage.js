@@ -2,8 +2,6 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import LetterHead from './letterHead';
-import LetterHeadBack from './letterHeadBack';
 import Print from './Print';
 
 class SecondPage extends React.Component {

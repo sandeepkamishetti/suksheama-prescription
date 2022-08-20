@@ -7,6 +7,7 @@ class Print extends React.PureComponent {
   render() {
     return (
       <div>
+        <PrintPage ref={el => (this.componentRef = el)} medicinesHistory={this.props.medicinesHistory} />
         <ReactToPrint content={() => this.componentRef}>
           <PrintContextConsumer>
             {({ handlePrint }) => (
@@ -14,7 +15,6 @@ class Print extends React.PureComponent {
             )}
           </PrintContextConsumer>
         </ReactToPrint>
-        <PrintPage ref={el => (this.componentRef = el)} medicinesHistory={this.props.medicinesHistory} />
       </div>
     );
   }
