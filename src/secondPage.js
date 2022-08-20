@@ -3,8 +3,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import LetterHead from './letterHead';
-import ReactToPrint from 'react-to-print';
 import LetterHeadBack from './letterHeadBack';
+import Print from './Print';
 
 class SecondPage extends React.Component {
     constructor(props) {
@@ -1130,28 +1130,9 @@ class SecondPage extends React.Component {
                 )}
                 {this.state.letterHeadTab  && (
                     <>
-                        <LetterHead medicinesHistory={this.state.medicinesHistory} ref={el => (this.componentRef = el)} />
-                        <ReactToPrint
-                            trigger={() => {
-                                // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
-                                // to the root node of the returned component as it will be overwritten.
-                                return <button>Print this out!</button>;
-                            }}
-                            content={() => this.componentRef}
-                        />
-                        <LetterHeadBack medicinesHistory={this.state.medicinesHistory} ref={el => (this.letterRef = el)} />
-                        <ReactToPrint
-                            trigger={() => {
-                                // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
-                                // to the root node of the returned component as it will be overwritten.
-                                return <button>Print this out!</button>;
-                            }}
-                            content={() => this.letterRef}
-                        />
-
+                        <Print medicinesHistory={this.state.medicinesHistory}/>
                     </>
                 )}
-
             </>
         )
     }
