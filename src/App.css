@@ -139,8 +139,8 @@ input {
 
 .medicine-data-head {
   position: relative;
-  top: 220px;
-  left: 110px;
+  top: 190px;
+  left: 130px;
   font-weight: bold;
 }
 
@@ -261,4 +261,9 @@ input {
 
 .hideCheckMark{ /*Sandeep's changes*/
   visibility: hidden;
+}
+
+.print {
+  width: 800px;
+  margin: 20px auto;
 }
