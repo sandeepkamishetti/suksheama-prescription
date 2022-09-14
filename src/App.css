@@ -61,7 +61,7 @@ input {
 
 .patient-data-head {
   position: relative;
-  top: 265px;
+  top: 295px;
   left: 60px;
   font-weight: bold;
 }
@@ -72,7 +72,7 @@ input {
 
 .header-2-data {
   margin-top: 8px !important;
- margin-left: -30px !important;
+ margin-left: -50px !important;
 }
 
 .second-row {
@@ -96,19 +96,19 @@ input {
 }
 
 .past-history {
-  margin-top: 75px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .findings {
-  margin-top: 90px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .provisional {
-  margin-top: 90px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
@@ -139,8 +139,8 @@ input {
 
 .medicine-data-head {
   position: relative;
-  top: 190px;
-  left: 130px;
+  top: 170px;
+  left: 160px;
   font-weight: bold;
 }
 
@@ -150,7 +150,7 @@ input {
 }
 
 .medicine {
-  margin-top: 20px !important; /*Sandeep's changes*/
+  margin-top: 30px !important; /*Sandeep's changes*/
   height: 25px;
   width: 77%;  /*Sandeep's changes*/
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
@@ -163,9 +163,16 @@ input {
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
 }
 
+.med2 {
+  height: 25px;
+  margin-top: 30px !important;  /*Sandeep's changes*/
+  width: 77%;  /*Sandeep's changes*/
+  flex-wrap: nowrap !important;  /*Sandeep's changes*/
+}
+
 .diet {
   margin-top: 50px !important;  /*Sandeep's changes*/
-  height: 50px;
+  height: 100px;
   margin-left: -60px !important;  /*Sandeep's changes*/
 }
 
@@ -177,7 +184,7 @@ input {
 }
 
 .review {
-  margin-top: 85px !important;
+  margin-top: 115px !important;
   margin-left: -25px !important;
   height: 90px;
 }
@@ -189,12 +196,12 @@ input {
 }
 
 .date {  /*Sandeep's changes*/
-  margin-left: 60px;
+  margin-left: 70px;
   margin-top: 10px;
 }
 
 .time{  /*Sandeep's changes*/
-  margin-left: 60px;
+  margin-left: 70px;
   margin-top: 15px;
   width: 100%;
 }
@@ -229,7 +236,7 @@ input {
 
 .check-mark {  /*Sandeep's changes*/
   margin-left: 0px;
-  width: 7.33333% !important;
+  width: 50px !important;
 }
 
 .dur{  /*Sandeep's changes*/
