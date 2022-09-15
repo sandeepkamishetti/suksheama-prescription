@@ -72,7 +72,7 @@ input {
 
 .header-2-data {
   margin-top: 8px !important;
- margin-left: -45px !important;
+ margin-left: -60px !important;
 }
 
 .second-row {
@@ -80,7 +80,7 @@ input {
 }
 
 .second-column {
-  margin-left: 53px;/*Sandeep's changes*/
+  text-align: right;/*Sandeep's changes*/
 }
 
 .present-complaints {
