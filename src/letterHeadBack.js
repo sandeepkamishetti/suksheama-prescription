@@ -194,10 +194,10 @@ class LetterHeadBack extends React.Component {
                     </div>
                     <div className="row investigations">
                         <div className="col-5 investigate">{ /*Sandeep's changes*/ }
-                            {medicinesInfo.invAdviced}
+                            <pre>{medicinesInfo.invAdviced}</pre>
                         </div>
                         <div className="col-4 physio">
-                            {medicinesInfo.phyAdviced}
+                            <pre>{medicinesInfo.phyAdviced}</pre>
                         </div>
                     </div>
                     <div className="row review">

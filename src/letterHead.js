@@ -77,16 +77,16 @@ class LetterHead extends React.Component {
                     </div>
                     <div className="right-side-data">
                         <div className="present-complaints">
-                            {patientInfo ? patientInfo.presentComplaints : ""}
+                            <pre>{patientInfo ? patientInfo.presentComplaints : ""}</pre>
                         </div>
                         <div className="past-history">
-                            {patientInfo ? patientInfo.pastHistory : ""}
+                        <pre>{patientInfo ? patientInfo.pastHistory : ""}</pre>
                         </div>
                         <div className="findings">
-                            {patientInfo ? patientInfo.findings : ""}
+                        <pre>{patientInfo ? patientInfo.findings : ""}</pre>
                         </div>
                         <div className="provisional">
-                            {patientInfo ? patientInfo.provDiagnosis : ""}
+                        <pre>{patientInfo ? patientInfo.provDiagnosis : ""}</pre>
                         </div>
                     </div>
                 </div>
