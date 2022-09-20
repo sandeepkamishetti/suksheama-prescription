@@ -70,6 +70,10 @@ input {
   margin-left: 40px; /*Sandeep's changes*/ 
 }
 
+pre {
+margin:0px !important;
+}
+
 .header-2-data {
   margin-top: 8px !important;
  margin-left: -60px !important;
