@@ -403,7 +403,7 @@ class SecondPage extends React.Component {
             isAfternoon3: state.isAfternoon3,
             isNight3: state.isNight3,
             isAfterMorningFood3: state.isAfterMorningFood3,
-            isAfterAfternoonFood3: state.isAfterMorningFood3,
+            isAfterAfternoonFood3: state.isAfterAfternoonFood3,
             isAfterNightFood3: state.isAfterNightFood3,
             isBeforeMorningFood3: state.isBeforeMorningFood3,
             isBeforeAfternoonFood3: state.isBeforeAfternoonFood3,
