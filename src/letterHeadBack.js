@@ -21,7 +21,7 @@ class LetterHeadBack extends React.Component {
         return (
             <div className="letter-head-back">
                 <div className="medicine-data-head">
-                    <div className="row med1">
+                    <div className="row med2">
                         <div className="col-5">
                             {medicinesInfo.medicine1}
                         </div>
@@ -194,10 +194,10 @@ class LetterHeadBack extends React.Component {
                     </div>
                     <div className="row investigations">
                         <div className="col-5 investigate">{ /*Sandeep's changes*/ }
-                            {medicinesInfo.invAdviced}
+                            <pre>{medicinesInfo.invAdviced}</pre>
                         </div>
                         <div className="col-4 physio">
-                            {medicinesInfo.phyAdviced}
+                            <pre>{medicinesInfo.phyAdviced}</pre>
                         </div>
                     </div>
                     <div className="row review">

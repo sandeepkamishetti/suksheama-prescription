@@ -2,9 +2,7 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import LetterHead from './letterHead';
-import ReactToPrint from 'react-to-print';
-import LetterHeadBack from './letterHeadBack';
+import Print from './Print';
 
 class SecondPage extends React.Component {
     constructor(props) {
@@ -405,7 +403,7 @@ class SecondPage extends React.Component {
             isAfternoon3: state.isAfternoon3,
             isNight3: state.isNight3,
             isAfterMorningFood3: state.isAfterMorningFood3,
-            isAfterAfternoonFood3: state.isAfterMorningFood3,
+            isAfterAfternoonFood3: state.isAfterAfternoonFood3,
             isAfterNightFood3: state.isAfterNightFood3,
             isBeforeMorningFood3: state.isBeforeMorningFood3,
             isBeforeAfternoonFood3: state.isBeforeAfternoonFood3,
@@ -1128,30 +1126,11 @@ class SecondPage extends React.Component {
                         </div>
                     </div>
                 )}
-                {this.state.letterHeadTab && (
+                {this.state.letterHeadTab  && (
                     <>
-                        <LetterHead medicinesHistory={this.state.medicinesHistory} ref={el => (this.componentRef = el)} />
-                        <ReactToPrint
-                            trigger={() => {
-                                // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
-                                // to the root node of the returned component as it will be overwritten.
-                                return <button>Print this out!</button>;
-                            }}
-                            content={() => this.componentRef}
-                        />
-                        <LetterHeadBack medicinesHistory={this.state.medicinesHistory} ref={el => (this.letterRef = el)} />
-                        <ReactToPrint
-                            trigger={() => {
-                                // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
-                                // to the root node of the returned component as it will be overwritten.
-                                return <button>Print this out!</button>;
-                            }}
-                            content={() => this.letterRef}
-                        />
-
+                        <Print medicinesHistory={this.state.medicinesHistory}/>
                     </>
                 )}
-
             </>
         )
     }

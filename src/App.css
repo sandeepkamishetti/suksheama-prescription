@@ -57,22 +57,31 @@ input {
   height: 297mm;
   /* background-size: 100%; */
   margin: 0px auto;
+  text-transform: uppercase;
 }
 
 .patient-data-head {
   position: relative;
-  top: 265px;
+  top: 295px;
   left: 60px;
-  font-weight: bold;
+  font-weight: normal; /*Sandeep's changes*/ 
 }
 
 .age {
   margin-left: 40px; /*Sandeep's changes*/ 
 }
 
+pre {
+margin:0px !important;
+white-space: pre-wrap; /*Sandeep's change.Added this attribute*/ 
+font-weight: normal; /*Sandeep's change bold to normal*/ 
+font-size: 1rem !important;
+font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
 .header-2-data {
   margin-top: 8px !important;
- margin-left: -30px !important;
+ margin-left: -60px !important;
 }
 
 .second-row {
@@ -80,7 +89,7 @@ input {
 }
 
 .second-column {
-  margin-left: 53px;/*Sandeep's changes*/
+  text-align: right;/*Sandeep's changes*/
 }
 
 .present-complaints {
@@ -96,19 +105,19 @@ input {
 }
 
 .past-history {
-  margin-top: 75px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .findings {
-  margin-top: 90px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
 
 .provisional {
-  margin-top: 90px;/*Sandeep's changes*/
+  margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
 }
@@ -135,13 +144,14 @@ input {
   height: 297mm;
   /* background-size: 100%; */
   margin: 0px auto;
+  text-transform: uppercase;
 }
 
 .medicine-data-head {
   position: relative;
-  top: 220px;
-  left: 110px;
-  font-weight: bold;
+  top: 170px;
+  left: 160px;
+  font-weight: normal; /*Sandeep's changes*/ 
 }
 
 .col-1.check-mark {
@@ -150,7 +160,7 @@ input {
 }
 
 .medicine {
-  margin-top: 20px !important; /*Sandeep's changes*/
+  margin-top: 30px !important; /*Sandeep's changes*/
   height: 25px;
   width: 77%;  /*Sandeep's changes*/
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
@@ -163,9 +173,16 @@ input {
   flex-wrap: nowrap !important;  /*Sandeep's changes*/
 }
 
+.med2 {
+  height: 25px;
+  margin-top: 30px !important;  /*Sandeep's changes*/
+  width: 77%;  /*Sandeep's changes*/
+  flex-wrap: nowrap !important;  /*Sandeep's changes*/
+}
+
 .diet {
   margin-top: 50px !important;  /*Sandeep's changes*/
-  height: 50px;
+  height: 100px;
   margin-left: -60px !important;  /*Sandeep's changes*/
 }
 
@@ -177,7 +194,7 @@ input {
 }
 
 .review {
-  margin-top: 85px !important;
+  margin-top: 115px !important;
   margin-left: -25px !important;
   height: 90px;
 }
@@ -189,12 +206,12 @@ input {
 }
 
 .date {  /*Sandeep's changes*/
-  margin-left: 60px;
+  margin-left: 70px;
   margin-top: 10px;
 }
 
 .time{  /*Sandeep's changes*/
-  margin-left: 60px;
+  margin-left: 70px;
   margin-top: 15px;
   width: 100%;
 }
@@ -229,7 +246,7 @@ input {
 
 .check-mark {  /*Sandeep's changes*/
   margin-left: 0px;
-  width: 7.33333% !important;
+  width: 50px !important;
 }
 
 .dur{  /*Sandeep's changes*/
@@ -252,13 +269,19 @@ input {
 
 .investigate{ /*Sandeep's changes*/
   width: 430px !important;
+  margin-left: -40px;
 }
 
 .careOf{ /*Sandeep's changes*/
-  margin-left: -46px !important;
+  margin-left: -40px !important;
   font-size: 11px;
 }
 
 .hideCheckMark{ /*Sandeep's changes*/
   visibility: hidden;
+}
+
+.print {
+  width: 800px;
+  margin: 110px auto; /*Sandeep's changes*/
 }
