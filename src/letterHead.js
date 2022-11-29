@@ -14,6 +14,7 @@ class LetterHead extends React.Component {
         this.setState({ patientData: this.props.medicinesHistory ? this.props.medicinesHistory : {} });
     }
     render() {
+        window.scrollTo(0,0);
         const patientInfo = this.state.patientData ? this.state.patientData.patientHistory : "";
         return (
             <div className="letter-head">

@@ -2,7 +2,13 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Suggestion from "search-suggestion";  //Added by Sandeep for searching medicine
 import Print from './Print';
+
+const items = ["BAKWELL AP", "THIOWELL", "GLENROL ", "KETOROL", "SEPIT MR", "SETOLAC MR", "FLAMINATE", "PIROWELL", "FLAMINATE SP", 
+"AXOVIT", "ZINCOBION PLUS", "ENHANCE", "MYOTOP 150 MG", "NUSON 150 MG", "JOINT PLUS", "ALTRAJOINT C2", "ROSIFIT TRIO", "BOROFLEX", 
+"ORCERIN C2", "JOINT PLUS SACHET", "RAAP DSR", "RQD", "QXOLE", "CALBONA K2", "MEGACEE", "OSTEOBION K2", "CLABONA XT", "CISSMORE", 
+"CEFZUM", "QURECLAV 625", "FABUXA 80 MG", "FOLAX G"];
 
 class SecondPage extends React.Component {
     constructor(props) {
@@ -96,6 +102,23 @@ class SecondPage extends React.Component {
         const { name, value } = e.target
         this.setState({ [name]: value });
     }
+
+    handleChange = (e) => {
+        //const value = e.target.value;
+        const { name, value } = e.target
+        let filterData = [];
+        if (value) {
+            filterData = this.createData(value, items);
+        }
+        this.setState({
+            [name]: filterData
+        });
+    };
+
+    createData = (word, data) => {
+        const re = new RegExp(`${word.toLowerCase()}.*\\B`, "g");
+        return data.filter((item) => re.test(item.toLowerCase()));
+    };
 
     onChangeMorning1 = () => {
         this.setState(initialState => ({
@@ -455,6 +478,7 @@ class SecondPage extends React.Component {
         this.setState({ medicinesHistory: medicinesData, letterHeadTab: true, medicinesTab: false });
     }
     render() {
+        //window.scrollTo(0,0);
         return (
             <>
                 {this.state.medicinesTab && (
@@ -465,7 +489,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine1:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine1"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
@@ -564,7 +635,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine2:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine2"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
@@ -666,7 +784,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine3:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine3"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
@@ -770,7 +935,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine4:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine4"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
@@ -873,7 +1085,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine5:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine5"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
@@ -975,7 +1234,54 @@ class SecondPage extends React.Component {
                                 <label>Medicine6:</label>
                             </div>
                             <div className="col-8">
-                                <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} />
+                                {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
+                                <Suggestion
+                                    getDisplayName={(item) => item}
+                                    items={this.state.currentData}
+                                >
+                                    {({
+                                        getInputProps,
+                                        getListItemProps,
+                                        getItemProps,
+                                        inputValue,
+                                        selectedItem,
+                                        highlightedIndex,
+                                        items,
+                                        isOpen,
+                                        clearInputValue
+                                    }) => (
+                                        <div>
+                                            <input name="medicine6"
+                                                {...getInputProps({
+                                                    placeholder: "Select medicine",
+                                                    onChange: this.handleChange
+                                                })}
+                                            />
+                                            {isOpen && (
+                                                <div {...getListItemProps()}>
+                                                    {items.map((item, index) => (
+                                                        <div
+                                                            {...getItemProps({ item, index })}
+                                                            key={item}
+                                                            style={{
+                                                                backgroundColor:
+                                                                    highlightedIndex === index
+                                                                        ? "rgb(232, 232, 232)"
+                                                                        : "white",
+                                                                fontWeight:
+                                                                    selectedItem && selectedItem === item
+                                                                        ? "bold"
+                                                                        : "normal"
+                                                            }}
+                                                        >
+                                                            {item}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </Suggestion>
                             </div>
                         </div>
                         <div className="input_fields row">
