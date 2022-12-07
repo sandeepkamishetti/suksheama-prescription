@@ -16,7 +16,8 @@ class SecondPage extends React.Component {
         this.state = {
             letterHeadTab: false,
             medicinesTab: true,
-            medicine1: "",
+            medicine1: [],
+            medicine1Res: "",
             isMorning1: false,
             isAfternoon1: false,
             isNight1: false,
@@ -26,7 +27,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood1: false,
             isBeforeAfternoonFood1: false,
             isBeforeNightFood1: false,
-            medicine2: "",
+            medicine2: [],
             isMorning2: false,
             isAfternoon2: false,
             isNight2: false,
@@ -36,7 +37,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood2: false,
             isBeforeAfternoonFood2: false,
             isBeforeNightFood2: false,
-            medicine3: "",
+            medicine3: [],
             isMorning3: false,
             isAfternoon3: false,
             isNight3: false,
@@ -46,7 +47,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood3: false,
             isBeforeAfternoonFood3: false,
             isBeforeNightFood3: false,
-            medicine4: "",
+            medicine4: [],
             isMorning4: false,
             isAfternoon4: false,
             isNight4: false,
@@ -56,7 +57,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood4: false,
             isBeforeAfternoonFood4: false,
             isBeforeNightFood4: false,
-            medicine5: "",
+            medicine5: [],
             isMorning5: false,
             isAfternoon5: false,
             isNight5: false,
@@ -66,7 +67,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood5: false,
             isBeforeAfternoonFood5: false,
             isBeforeNightFood5: false,
-            medicine6: "",
+            medicine6: [],
             isMorning6: false,
             isAfternoon6: false,
             isNight6: false,
@@ -116,7 +117,7 @@ class SecondPage extends React.Component {
     };
 
     createData = (word, data) => {
-        const re = new RegExp(`${word.toLowerCase()}.*\\B`, "g");
+        const re = new RegExp(`${word.toLowerCase()}`);
         return data.filter((item) => re.test(item.toLowerCase()));
     };
 
@@ -401,7 +402,7 @@ class SecondPage extends React.Component {
         console.log(this.state);
         const state = this.state;
         const medicinesData = {
-            medicine1: state.medicine1,
+            medicine1: document.getElementsByName("medicine1")[0].value,
             isMorning1: state.isMorning1,
             isAfternoon1: state.isAfternoon1,
             isNight1: state.isNight1,
@@ -411,7 +412,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood1: state.isBeforeMorningFood1,
             isBeforeAfternoonFood1: state.isBeforeAfternoonFood1,
             isBeforeNightFood1: state.isBeforeNightFood1,
-            medicine2: state.medicine2,
+            medicine2: document.getElementsByName("medicine2")[0].value,
             isMorning2: state.isMorning2,
             isAfternoon2: state.isAfternoon2,
             isNight2: state.isNight2,
@@ -421,7 +422,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood2: state.isBeforeMorningFood2,
             isBeforeAfternoonFood2: state.isBeforeAfternoonFood2,
             isBeforeNightFood2: state.isBeforeNightFood2,
-            medicine3: state.medicine3,
+            medicine3: document.getElementsByName("medicine3")[0].value,
             isMorning3: state.isMorning3,
             isAfternoon3: state.isAfternoon3,
             isNight3: state.isNight3,
@@ -431,7 +432,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood3: state.isBeforeMorningFood3,
             isBeforeAfternoonFood3: state.isBeforeAfternoonFood3,
             isBeforeNightFood3: state.isBeforeNightFood3,
-            medicine4: state.medicine4,
+            medicine4: document.getElementsByName("medicine4")[0].value,
             isMorning4: state.isMorning4,
             isAfternoon4: state.isAfternoon4,
             isNight4: state.isNight4,
@@ -441,7 +442,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood4: state.isBeforeMorningFood4,
             isBeforeAfternoonFood4: state.isBeforeAfternoonFood4,
             isBeforeNightFood4: state.isBeforeNightFood4,
-            medicine5: state.medicine5,
+            medicine5: document.getElementsByName("medicine5")[0].value,
             isMorning5: state.isMorning5,
             isAfternoon5: state.isAfternoon5,
             isNight5: state.isNight5,
@@ -451,7 +452,7 @@ class SecondPage extends React.Component {
             isBeforeMorningFood5: state.isBeforeMorningFood5,
             isBeforeAfternoonFood5: state.isBeforeAfternoonFood5,
             isBeforeNightFood5: state.isBeforeNightFood5,
-            medicine6: state.medicine6,
+            medicine6: document.getElementsByName("medicine6")[0].value,
             isMorning6: state.isMorning6,
             isAfternoon6: state.isAfternoon6,
             isNight6: state.isNight6,
@@ -492,7 +493,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine1}
                                 >
                                     {({
                                         getInputProps,
@@ -507,9 +508,10 @@ class SecondPage extends React.Component {
                                     }) => (
                                         <div>
                                             <input name="medicine1"
+                                            
                                                 {...getInputProps({
                                                     placeholder: "Select medicine",
-                                                    onChange: this.handleChange
+                                                    onChange: this.handleChange,
                                                 })}
                                             />
                                             {isOpen && (
@@ -638,7 +640,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine2}
                                 >
                                     {({
                                         getInputProps,
@@ -787,7 +789,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine3}
                                 >
                                     {({
                                         getInputProps,
@@ -938,7 +940,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine4}
                                 >
                                     {({
                                         getInputProps,
@@ -1088,7 +1090,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine5}
                                 >
                                     {({
                                         getInputProps,
@@ -1237,7 +1239,7 @@ class SecondPage extends React.Component {
                                 {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
                                 <Suggestion
                                     getDisplayName={(item) => item}
-                                    items={this.state.currentData}
+                                    items={this.state.medicine6}
                                 >
                                     {({
                                         getInputProps,
