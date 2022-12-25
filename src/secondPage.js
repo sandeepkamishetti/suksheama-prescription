@@ -540,57 +540,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine1:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.TabletInfoArr}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine1"
-                        {...getInputProps({
-                          placeholder: "Select medicinesadas",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-
                 <Select
                   value={selectedOption}
                   onChange={this.handleChangeSelect}
@@ -606,7 +557,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.isBeforeMorningFood1}
+                        checked={this.state.selectedOption?.foodRelation?.includes(
+                          1
+                        )}
                         onChange={this.onChangeBeforeMorningFood1}
                         className="form-check-input pr-2"
                       />
@@ -635,7 +588,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.isBeforeAfternoonFood1}
+                        checked={this.state.selectedOption?.foodRelation?.includes(
+                          3
+                        )}
                         onChange={this.onChangeBeforeAfternoonFood1}
                         className="form-check-input pr-2"
                       />
@@ -664,7 +619,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.isBeforeNightFood1}
+                        checked={this.state.selectedOption?.foodRelation?.includes(
+                          5
+                        )}
                         onChange={this.onChangeBeforeNightFood1}
                         className="form-check-input pr-2"
                       />
@@ -675,7 +632,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.isAfterNightFood1}
+                        checked={this.state.selectedOption?.foodRelation?.includes(
+                          6
+                        )}
                         onChange={this.onChangeAfterNightFood1}
                         className="form-check-input pr-2"
                       />
@@ -691,9 +650,10 @@ class SecondPage extends React.Component {
               </div>
               <div className="col-8">
                 <input
+                  readOnly
                   type="text"
                   name="duration1"
-                  value={this.state.duration1}
+                  value={this.state.selectedOption?.timing}
                   onChange={this.onChangeInput}
                 />
               </div>
