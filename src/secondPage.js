@@ -44,11 +44,6 @@ const items = [
 
 class SecondPage extends React.Component {
   constructor(props) {
-    const infoT = TabletInfo.map((value) => {
-      return value.name;
-    });
-    console.log("TabletInfo", TabletInfo, infoT);
-
     super(props);
     this.state = {
       letterHeadTab: false,
@@ -443,7 +438,6 @@ class SecondPage extends React.Component {
   };
 
   handleSubmit = () => {
-    console.log(this.state);
     const state = this.state;
     const medicinesData = {
       medicine1: document.getElementsByName("medicine1")[0].value,
@@ -526,15 +520,23 @@ class SecondPage extends React.Component {
       medicinesTab: false,
     });
   };
+  // onclick back function from icon to go to previous page
+  handleBack = () => {
+    // Callback function to go to parent component in the previous page
+    this.props.onBackClick();
+  };
   render() {
     //window.scrollTo(0,0);
+
+    // Using this for binding state to first medicine dropwon, duration and timings
     const { selectedOption } = this.state;
-    console.log("asdasd", this.TabletInfoArr);
 
     return (
       <>
         {this.state.medicinesTab && (
           <div className="App container">
+            {/*use this arrow to go back to previous page */}
+            <i class="arrow left" onClick={this.handleBack}></i>
             <h2>Medicines</h2>
             <div className="input_fields row">
               <div className="col-4">
@@ -1114,7 +1116,6 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-
             <div className="input_fields row">
               <div className="col-4">
                 <label>Medicine5:</label>
@@ -1499,7 +1500,6 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-
             <div className="row">
               <button onClick={this.handleSubmit}>Print</button>
             </div>
