@@ -45,6 +45,7 @@ const items = [
 class SecondPage extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       letterHeadTab: false,
       medicinesTab: true,
@@ -440,7 +441,7 @@ class SecondPage extends React.Component {
   handleSubmit = () => {
     const state = this.state;
     const medicinesData = {
-      medicine1: document.getElementsByName("medicine1")[0].value,
+      medicine1: state.selectedOption?.value,
       isMorning1: state.isMorning1,
       isAfternoon1: state.isAfternoon1,
       isNight1: state.isNight1,
@@ -560,6 +561,9 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.selectedOption?.foodRelation?.includes(
+                          1
+                        )}
+                        value={this.state.selectedOption?.foodRelation?.includes(
                           1
                         )}
                         onChange={this.onChangeBeforeMorningFood1}
