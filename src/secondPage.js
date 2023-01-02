@@ -337,9 +337,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineOne = (medicineOne) => {
-    this.setState({ medicineOne }, () =>
-      console.log(`Option selected:`, this.state.medicineOne)
-    );
+    this.setState({ medicineOne: medicineOne });
+
     if (medicineOne?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood1: true });
     }
@@ -361,9 +360,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineTwo = (medicineTwo) => {
-    this.setState({ medicineTwo }, () =>
-      console.log(`Option selected:`, this.state.medicineTwo)
-    );
+    this.setState({ medicineTwo: medicineTwo });
+
     if (medicineTwo?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood2: true });
     }
@@ -385,9 +383,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineThree = (medicineThree) => {
-    this.setState({ medicineThree }, () =>
-      console.log(`Option selected:`, this.state.medicineThree)
-    );
+    this.setState({ medicineThree: medicineThree });
+
     if (medicineThree?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood3: true });
     }
@@ -409,9 +406,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineFour = (medicineFour) => {
-    this.setState({ medicineFour }, () =>
-      console.log(`Option selected:`, this.state.medicineFour)
-    );
+    this.setState({ medicineFour: medicineFour });
+
     if (medicineFour?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood4: true });
     }
@@ -433,9 +429,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineFive = (medicineFive) => {
-    this.setState({ medicineFive }, () =>
-      console.log(`Option selected:`, this.state.medicineFive)
-    );
+
+    this.setState({ medicineFive: medicineFive });
     if (medicineFive?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood5: true });
     }
@@ -457,9 +452,8 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineSix = (medicineSix) => {
-    this.setState({ medicineSix }, () =>
-      console.log(`Option selected:`, this.state.medicineSix)
-    );
+    this.setState({ medicineSix: medicineSix });
+
     if (medicineSix?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood6: true });
     }
@@ -493,7 +487,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood1: state.isBeforeMorningFood1,
       isBeforeAfternoonFood1: state.isBeforeAfternoonFood1,
       isBeforeNightFood1: state.isBeforeNightFood1,
-      medicine2: state.medicineOne?.value,
+      medicine2: state.medicineTwo?.value,
       isMorning2: state.isMorning2,
       isAfternoon2: state.isAfternoon2,
       isNight2: state.isNight2,
@@ -586,7 +580,7 @@ class SecondPage extends React.Component {
         {this.state.medicinesTab && (
           <div className="App container">
             {/*use this arrow to go back to previous page */}
-            <i class="arrow left" onClick={this.handleBack}></i>
+            <i className="arrow left" onClick={this.handleBack}></i>
             <h2>Medicines</h2>
             <div className="input_fields row">
               <div className="col-4">
@@ -702,6 +696,7 @@ class SecondPage extends React.Component {
                 <input
                   type="text"
                   name="duration1"
+                  value={this.state.duration1}
                   onChange={this.onChangeInput}
                 />
               </div>
