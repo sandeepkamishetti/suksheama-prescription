@@ -155,21 +155,6 @@ class SecondPage extends React.Component {
     return data.filter((item) => re.test(item.toLowerCase()));
   };
 
-  onChangeMorning1 = () => {
-    this.setState((initialState) => ({
-      isMorning1: !initialState.isMorning1,
-    }));
-  };
-  onChangeAfternoon1 = () => {
-    this.setState((initialState) => ({
-      isAfternoon1: !initialState.isAfternoon1,
-    }));
-  };
-  onChangeNight1 = () => {
-    this.setState((initialState) => ({
-      isNight1: !initialState.isNight1,
-    }));
-  };
   onChangeMorning2 = () => {
     this.setState((initialState) => ({
       isMorning2: !initialState.isMorning2,
@@ -219,31 +204,6 @@ class SecondPage extends React.Component {
   onChangeMorning3 = () => {
     this.setState((initialState) => ({
       isMorning3: !initialState.isMorning3,
-    }));
-  };
-  onChangeAfterMorningFood3 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood3: !initialState.isAfterMorningFood3,
-    }));
-  };
-  onChangeBeforeMorningFood3 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood3: !initialState.isBeforeMorningFood3,
-    }));
-  };
-  onChangeAfternoon3 = () => {
-    this.setState((initialState) => ({
-      isAfternoon3: !initialState.isAfternoon3,
-    }));
-  };
-  onChangeAfterAfternoonFood3 = () => {
-    this.setState((initialState) => ({
-      isAfterAfternoonFood3: !initialState.isAfterAfternoonFood3,
-    }));
-  };
-  onChangeBeforeAfternoonFood3 = () => {
-    this.setState((initialState) => ({
-      isBeforeAfternoonFood3: !initialState.isBeforeAfternoonFood3,
     }));
   };
   onChangeNight3 = () => {
@@ -313,16 +273,7 @@ class SecondPage extends React.Component {
       isMorning5: !initialState.isMorning5,
     }));
   };
-  onChangeAfterMorningFood5 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood5: !initialState.isAfterMorningFood5,
-    }));
-  };
-  onChangeBeforeMorningFood5 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood5: !initialState.isBeforeMorningFood5,
-    }));
-  };
+
   onChangeAfternoon5 = () => {
     this.setState((initialState) => ({
       isAfternoon5: !initialState.isAfternoon5,
@@ -354,21 +305,6 @@ class SecondPage extends React.Component {
     }));
   };
 
-  onChangeMorning6 = () => {
-    this.setState((initialState) => ({
-      isMorning6: !initialState.isMorning6,
-    }));
-  };
-  onChangeAfterMorningFood6 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood6: !initialState.isAfterMorningFood6,
-    }));
-  };
-  onChangeBeforeMorningFood6 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood6: !initialState.isBeforeMorningFood6,
-    }));
-  };
   onChangeAfternoon6 = () => {
     this.setState((initialState) => ({
       isAfternoon6: !initialState.isAfternoon6,
@@ -424,6 +360,126 @@ class SecondPage extends React.Component {
     }
   };
 
+  handleMedicineTwo = (medicineTwo) => {
+    this.setState({ medicineTwo }, () =>
+      console.log(`Option selected:`, this.state.medicineTwo)
+    );
+    if (medicineTwo?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood2: true });
+    }
+  };
+
+  handleMedicineThree = (medicineThree) => {
+    this.setState({ medicineThree }, () =>
+      console.log(`Option selected:`, this.state.medicineThree)
+    );
+    if (medicineThree?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood3: true });
+    }
+  };
+
+  handleMedicineFour = (medicineFour) => {
+    this.setState({ medicineFour }, () =>
+      console.log(`Option selected:`, this.state.medicineFour)
+    );
+    if (medicineFour?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood4: true });
+    }
+  };
+
+  handleMedicineFive = (medicineFive) => {
+    this.setState({ medicineFive }, () =>
+      console.log(`Option selected:`, this.state.medicineFive)
+    );
+    if (medicineFive?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood5: true });
+    }
+  };
+
+  handleMedicineSix = (medicineSix) => {
+    this.setState({ medicineSix }, () =>
+      console.log(`Option selected:`, this.state.medicineSix)
+    );
+    if (medicineSix?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood6: true });
+    }
+  };
+
   handleSubmit = () => {
     const state = this.state;
     const medicinesData = {
@@ -437,7 +493,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood1: state.isBeforeMorningFood1,
       isBeforeAfternoonFood1: state.isBeforeAfternoonFood1,
       isBeforeNightFood1: state.isBeforeNightFood1,
-      medicine2: document.getElementsByName("medicine2")[0].value,
+      medicine2: state.medicineOne?.value,
       isMorning2: state.isMorning2,
       isAfternoon2: state.isAfternoon2,
       isNight2: state.isNight2,
@@ -447,7 +503,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood2: state.isBeforeMorningFood2,
       isBeforeAfternoonFood2: state.isBeforeAfternoonFood2,
       isBeforeNightFood2: state.isBeforeNightFood2,
-      medicine3: document.getElementsByName("medicine3")[0].value,
+      medicine3: state.medicineThree?.value,
       isMorning3: state.isMorning3,
       isAfternoon3: state.isAfternoon3,
       isNight3: state.isNight3,
@@ -457,7 +513,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood3: state.isBeforeMorningFood3,
       isBeforeAfternoonFood3: state.isBeforeAfternoonFood3,
       isBeforeNightFood3: state.isBeforeNightFood3,
-      medicine4: document.getElementsByName("medicine4")[0].value,
+      medicine4: state.medicineFour?.value,
       isMorning4: state.isMorning4,
       isAfternoon4: state.isAfternoon4,
       isNight4: state.isNight4,
@@ -467,7 +523,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood4: state.isBeforeMorningFood4,
       isBeforeAfternoonFood4: state.isBeforeAfternoonFood4,
       isBeforeNightFood4: state.isBeforeNightFood4,
-      medicine5: document.getElementsByName("medicine5")[0].value,
+      medicine5: state.medicineFive?.value,
       isMorning5: state.isMorning5,
       isAfternoon5: state.isAfternoon5,
       isNight5: state.isNight5,
@@ -477,7 +533,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood5: state.isBeforeMorningFood5,
       isBeforeAfternoonFood5: state.isBeforeAfternoonFood5,
       isBeforeNightFood5: state.isBeforeNightFood5,
-      medicine6: document.getElementsByName("medicine6")[0].value,
+      medicine6: state.medicineSix?.value,
       isMorning6: state.isMorning6,
       isAfternoon6: state.isAfternoon6,
       isNight6: state.isNight6,
@@ -516,7 +572,14 @@ class SecondPage extends React.Component {
     //window.scrollTo(0,0);
 
     // Using this for binding state to first medicine dropwon, duration and timings
-    const { medicineOne } = this.state;
+    const {
+      medicineOne,
+      medicineTwo,
+      medicineThree,
+      medicineFour,
+      medicineFive,
+      medicinesix,
+    } = this.state;
 
     return (
       <>
@@ -546,10 +609,8 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
+                        readOnly
                         checked={this.state.medicineOne?.foodRelation?.includes(
-                          1
-                        )}
-                        value={this.state.medicineOne?.foodRelation?.includes(
                           1
                         )}
                         className="form-check-input pr-2"
@@ -561,6 +622,7 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
+                        readOnly
                         checked={this.state.medicineOne?.foodRelation?.includes(
                           2
                         )}
@@ -578,6 +640,7 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
+                        readOnly
                         checked={this.state.medicineOne?.foodRelation?.includes(
                           3
                         )}
@@ -619,6 +682,7 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
+                        readOnly
                         checked={this.state.medicineOne?.foodRelation?.includes(
                           6
                         )}
@@ -636,10 +700,8 @@ class SecondPage extends React.Component {
               </div>
               <div className="col-8">
                 <input
-                  readOnly
                   type="text"
                   name="duration1"
-                  value={this.state.medicineOne?.timing}
                   onChange={this.onChangeInput}
                 />
               </div>
@@ -651,8 +713,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
+                  value={medicineTwo}
+                  onChange={this.handleMedicineTwo}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -666,7 +728,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood2}
-                        onChange={this.onChangeBeforeMorningFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -677,7 +738,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood2}
-                        onChange={this.onChangeAfterMorningFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -693,7 +753,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood2}
-                        onChange={this.onChangeBeforeAfternoonFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -704,7 +763,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood2}
-                        onChange={this.onChangeAfterAfternoonFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -720,7 +778,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood2}
-                        onChange={this.onChangeBeforeNightFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -731,7 +788,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood2}
-                        onChange={this.onChangeAfterNightFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -760,8 +816,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
+                  value={medicineThree}
+                  onChange={this.handleMedicineThree}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -775,7 +831,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood3}
-                        onChange={this.onChangeBeforeMorningFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -786,7 +841,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood3}
-                        onChange={this.onChangeAfterMorningFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -802,7 +856,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood3}
-                        onChange={this.onChangeBeforeAfternoonFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -813,7 +866,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood3}
-                        onChange={this.onChangeAfterAfternoonFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -829,7 +881,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood3}
-                        onChange={this.onChangeBeforeNightFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -840,7 +891,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood3}
-                        onChange={this.onChangeAfterNightFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -869,8 +919,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
+                  value={medicineFour}
+                  onChange={this.handleMedicineFour}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -884,7 +934,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood4}
-                        onChange={this.onChangeBeforeMorningFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -895,7 +944,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood4}
-                        onChange={this.onChangeAfterMorningFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -911,7 +959,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood4}
-                        onChange={this.onChangeBeforeAfternoonFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -922,7 +969,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood4}
-                        onChange={this.onChangeAfterAfternoonFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -938,7 +984,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood4}
-                        onChange={this.onChangeBeforeNightFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -949,7 +994,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood4}
-                        onChange={this.onChangeAfterNightFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -978,8 +1022,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
+                  value={medicineFive}
+                  onChange={this.handleMedicineFive}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -993,7 +1037,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood5}
-                        onChange={this.onChangeBeforeMorningFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1004,7 +1047,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood5}
-                        onChange={this.onChangeAfterMorningFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1020,7 +1062,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood5}
-                        onChange={this.onChangeBeforeAfternoonFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1031,7 +1072,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood5}
-                        onChange={this.onChangeAfterAfternoonFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1047,7 +1087,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood5}
-                        onChange={this.onChangeBeforeNightFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1058,7 +1097,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood5}
-                        onChange={this.onChangeAfterNightFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1087,8 +1125,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
+                  value={medicinesix}
+                  onChange={this.handleMedicineSix}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -1102,7 +1140,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood6}
-                        onChange={this.onChangeBeforeMorningFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1113,7 +1150,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood6}
-                        onChange={this.onChangeAfterMorningFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1129,7 +1165,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood6}
-                        onChange={this.onChangeBeforeAfternoonFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1140,7 +1175,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood6}
-                        onChange={this.onChangeAfterAfternoonFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1156,7 +1190,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood6}
-                        onChange={this.onChangeBeforeNightFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1167,7 +1200,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood6}
-                        onChange={this.onChangeAfterNightFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
