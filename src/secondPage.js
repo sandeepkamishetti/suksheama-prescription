@@ -1,11 +1,10 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select";
+import Select from "react-select"; // Added by Anish for Tablet dropdown
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Suggestion from "search-suggestion"; //Added by Sandeep for searching medicine
 import Print from "./Print";
-import TabletInfo from "./TabletData";
+import TabletInfo from "./TabletData"; // Tablets Data added by Anish
 
 const items = [
   "BAKWELL AP",
@@ -161,29 +160,9 @@ class SecondPage extends React.Component {
       isMorning1: !initialState.isMorning1,
     }));
   };
-  onChangeAfterMorningFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood1: !initialState.isAfterMorningFood1,
-    }));
-  };
-  onChangeBeforeMorningFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood1: !initialState.isBeforeMorningFood1,
-    }));
-  };
   onChangeAfternoon1 = () => {
     this.setState((initialState) => ({
       isAfternoon1: !initialState.isAfternoon1,
-    }));
-  };
-  onChangeAfterAfternoonFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterAfternoonFood1: !initialState.isAfterAfternoonFood1,
-    }));
-  };
-  onChangeBeforeAfternoonFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeAfternoonFood1: !initialState.isBeforeAfternoonFood1,
     }));
   };
   onChangeNight1 = () => {
@@ -191,17 +170,6 @@ class SecondPage extends React.Component {
       isNight1: !initialState.isNight1,
     }));
   };
-  onChangeAfterNightFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterNightFood1: !initialState.isAfterNightFood1,
-    }));
-  };
-  onChangeBeforeNightFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeNightFood1: !initialState.isBeforeNightFood1,
-    }));
-  };
-
   onChangeMorning2 = () => {
     this.setState((initialState) => ({
       isMorning2: !initialState.isMorning2,
@@ -432,16 +400,34 @@ class SecondPage extends React.Component {
     }));
   };
 
-  handleChangeSelect = (selectedOption) => {
-    this.setState({ selectedOption }, () =>
-      console.log(`Option selected:`, this.state.selectedOption)
+  handleMedicineOne = (medicineOne) => {
+    this.setState({ medicineOne }, () =>
+      console.log(`Option selected:`, this.state.medicineOne)
     );
+    if (medicineOne?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood1: true });
+    }
   };
 
   handleSubmit = () => {
     const state = this.state;
     const medicinesData = {
-      medicine1: state.selectedOption?.value,
+      medicine1: state.medicineOne?.value,
       isMorning1: state.isMorning1,
       isAfternoon1: state.isAfternoon1,
       isNight1: state.isNight1,
@@ -530,7 +516,7 @@ class SecondPage extends React.Component {
     //window.scrollTo(0,0);
 
     // Using this for binding state to first medicine dropwon, duration and timings
-    const { selectedOption } = this.state;
+    const { medicineOne } = this.state;
 
     return (
       <>
@@ -546,8 +532,8 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
                 <Select
-                  value={selectedOption}
-                  onChange={this.handleChangeSelect}
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
                   options={this.state.TabletInfoArr}
                 />
               </div>
@@ -560,13 +546,12 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           1
                         )}
-                        value={this.state.selectedOption?.foodRelation?.includes(
+                        value={this.state.medicineOne?.foodRelation?.includes(
                           1
                         )}
-                        onChange={this.onChangeBeforeMorningFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -576,10 +561,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           2
                         )}
-                        onChange={this.onChangeAfterMorningFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -594,10 +578,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           3
                         )}
-                        onChange={this.onChangeBeforeAfternoonFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -607,10 +590,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           4
                         )}
-                        onChange={this.onChangeAfterAfternoonFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -625,10 +607,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           5
                         )}
-                        onChange={this.onChangeBeforeNightFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -638,10 +619,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           6
                         )}
-                        onChange={this.onChangeAfterNightFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -659,7 +639,7 @@ class SecondPage extends React.Component {
                   readOnly
                   type="text"
                   name="duration1"
-                  value={this.state.selectedOption?.timing}
+                  value={this.state.medicineOne?.timing}
                   onChange={this.onChangeInput}
                 />
               </div>
@@ -668,56 +648,13 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine2:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine2}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine2"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
+                <Select
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
+                  options={this.state.TabletInfoArr}
+                />
               </div>
             </div>
             <div className="input_fields row">
@@ -820,56 +757,13 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine3:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine3}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine3"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
+                <Select
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
+                  options={this.state.TabletInfoArr}
+                />
               </div>
             </div>
             <div className="input_fields row">
@@ -972,56 +866,13 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine4:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine4}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine4"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
+                <Select
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
+                  options={this.state.TabletInfoArr}
+                />
               </div>
             </div>
             <div className="input_fields row">
@@ -1124,56 +975,13 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine5:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine5}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine5"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
+                <Select
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
+                  options={this.state.TabletInfoArr}
+                />
               </div>
             </div>
             <div className="input_fields row">
@@ -1276,56 +1084,13 @@ class SecondPage extends React.Component {
               <div className="col-4">
                 <label>Medicine6:</label>
               </div>
-              <div className="col-8">
+              <div className="col-4">
                 {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine6}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine6"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
+                <Select
+                  value={medicineOne}
+                  onChange={this.handleMedicineOne}
+                  options={this.state.TabletInfoArr}
+                />
               </div>
             </div>
             <div className="input_fields row">
