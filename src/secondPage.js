@@ -1,45 +1,10 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select"; // Added by Anish for Tablet dropdown
+import Select from "react-select";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Print from "./Print";
-import TabletInfo from "./TabletData"; // Tablets Data added by Anish
-
-const items = [
-  "BAKWELL AP",
-  "THIOWELL",
-  "GLENROL ",
-  "KETOROL",
-  "SEPIT MR",
-  "SETOLAC MR",
-  "FLAMINATE",
-  "PIROWELL",
-  "FLAMINATE SP",
-  "AXOVIT",
-  "ZINCOBION PLUS",
-  "ENHANCE",
-  "MYOTOP 150 MG",
-  "NUSON 150 MG",
-  "JOINT PLUS",
-  "ALTRAJOINT C2",
-  "ROSIFIT TRIO",
-  "BOROFLEX",
-  "ORCERIN C2",
-  "JOINT PLUS SACHET",
-  "RAAP DSR",
-  "RQD",
-  "QXOLE",
-  "CALBONA K2",
-  "MEGACEE",
-  "OSTEOBION K2",
-  "CLABONA XT",
-  "CISSMORE",
-  "CEFZUM",
-  "QURECLAV 625",
-  "FABUXA 80 MG",
-  "FOLAX G",
-];
+import TabletInfo from "./TabletData"; 
 
 class SecondPage extends React.Component {
   constructor(props) {
@@ -135,19 +100,6 @@ class SecondPage extends React.Component {
   onChangeInput = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-  };
-
-  handleChange = (e) => {
-    //const value = e.target.value;
-    console.log("handleChange", e.target.value);
-    const { name, value } = e.target;
-    let filterData = [];
-    if (value) {
-      filterData = this.createData(value, items);
-    }
-    this.setState({
-      [name]: filterData,
-    });
   };
 
   createData = (word, data) => {

@@ -2,47 +2,47 @@ const TabletInfo = [
   {
     value: "TAB.BAKWELL AP",
     label: "BAKWELL AP",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.THIOWELL",
     label: "THIOWELL",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.GLENROL DT",
     label: "GLENROL DT",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.KETOROL DT",
     label: "KETOROL DT",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.SEPIT MR",
     label: "SEPIT MR",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.SETOLAC MR",
     label: "SETOLAC MR",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.FLAMINATE",
     label: "FLAMINATE",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.PIROWELL",
     label: "PIROWELL",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "TAB.FLAMINATE SP",
     label: "FLAMINATE SP",
-    foodRelation: [2, 4],
+    foodRelation: [2, 6],
   },
   {
     value: "CAP.RAAP DSR",
@@ -165,13 +165,13 @@ const TabletInfo = [
     foodRelation: [2, 6],
   },
   {
-    value: "Tab.Myorelax 4 mg",
-    label: "Myorelax 4 mg",
+    value: "TAB.MYORELAX 4 mg",
+    label: "MYORELAX 4 mg",
     foodRelation: [2, 6],
   },
   {
-    value: "Tab.Myorelax 8 mg",
-    label: "Myorelax 8 mg",
+    value: "TAB.MYORELAX 8 mg",
+    label: "MYORELAX 8 mg",
     foodRelation: [2, 6],
   },
 ];

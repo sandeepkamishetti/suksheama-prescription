@@ -245,12 +245,13 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
 }
 
 .check-mark {  /*Sandeep's changes*/
-  margin-left: 0px;
+  margin-left: 2px;
   width: 50px !important;
 }
 
 .dur{  /*Sandeep's changes*/
   width: 12% !important;
+  margin-left: 20px;
 } 
 
 .isTd{  /*Sandeep's changes*/
