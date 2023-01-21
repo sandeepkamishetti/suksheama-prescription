@@ -119,11 +119,9 @@ class App extends React.Component {
       <>
         {this.state.doctorTab && (
           <div className="App container">
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields patient-name">
+              <div className="col-6">
                 <label>Patient Name:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="name"
@@ -131,12 +129,8 @@ class App extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Age:</label>
-              </div>
-              <div className="col-8">
+              <label>Age:</label>
+              <div className="col-6">
                 <input
                   type="text"
                   name="age"
@@ -145,11 +139,9 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields sex-field">
+              <div className="col-6">
                 <label className="sex">Sex:</label>
-              </div>
-              <div className="col-3">
                 <input
                   type="radio"
                   className="radioButton"
@@ -171,12 +163,8 @@ class App extends React.Component {
                   <i className="fas fa-female"></i>
                 </label>
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>C/o:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="co"
@@ -185,11 +173,9 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Weight:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="weight"
@@ -197,12 +183,8 @@ class App extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>B.P:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="bp"
@@ -211,11 +193,9 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Temp.:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="temp"
@@ -223,12 +203,8 @@ class App extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Time:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="time"
                   name="time"
@@ -237,11 +213,9 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Date:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="date"
                   name="date"
@@ -250,14 +224,11 @@ class App extends React.Component {
                   min={date}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Present Complaints with Duration:</label>
-              </div>
-              <div className="col-8">
                 <textarea
                   name="presentComplaints"
+                  className="text-area"
                   value={this.state.presentComplaints}
                   onChange={this.onChangeInput}
                   rows="5"
@@ -265,27 +236,23 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Past History:</label>
-              </div>
-              <div className="col-8">
                 <textarea
                   name="pastHistory"
+                  className="text-area"
                   value={this.state.pastHistory}
                   onChange={this.onChangeInput}
                   rows="5"
                   cols="35"
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Findings:</label>
-              </div>
-              <div className="col-8">
                 <textarea
                   name="findings"
+                  className="text-area"
                   value={this.state.findings}
                   onChange={this.onChangeInput}
                   rows="5"
@@ -293,13 +260,12 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Provisional Diagnosis:</label>
-              </div>
+            <div className="input_fields weigth-field">
               <div className="col-8">
+                <label>Provisional Diagnosis:</label>
                 <textarea
                   name="provDiagnosis"
+                  className="text-area"
                   value={this.state.provDiagnosis}
                   onChange={this.onChangeInput}
                   rows="5"
@@ -307,7 +273,7 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
+            <div className="input_fields weight-field">
               <div className="col-1">
                 <label className="form-check-label">
                   <input
@@ -386,8 +352,10 @@ class App extends React.Component {
                 </label>
               </div>
             </div>
-            <div className="row">
-              <button onClick={this.handleSubmit}>Next</button>
+            <div className="button-field">
+              <button className="next-button" onClick={this.handleSubmit}>
+                Next
+              </button>
             </div>
           </div>
         )}
