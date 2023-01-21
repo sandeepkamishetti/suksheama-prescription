@@ -331,3 +331,19 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
   width: 100%;
 }
 
+.medicine-field {
+  display: flex;
+}
+
+.medicine-dropdown {
+  width: 100%;
+}
+
+.duration-field {
+  margin-left: 70px;
+}
+
+.input-fields {
+  margin-top: 15px;
+  display: flex;
+}

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Select from "react-select";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Print from "./Print";
-import TabletInfo from "./TabletData"; 
+import TabletInfo from "./TabletData";
 
 class SecondPage extends React.Component {
   constructor(props) {
@@ -381,7 +381,6 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineFive = (medicineFive) => {
-
     this.setState({ medicineFive: medicineFive });
     if (medicineFive?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood5: true });
@@ -534,20 +533,29 @@ class SecondPage extends React.Component {
             {/*use this arrow to go back to previous page */}
             <i className="arrow left" onClick={this.handleBack}></i>
             <h2>Medicines</h2>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine1:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine1:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineOne}
+                    onChange={this.handleMedicineOne}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicineOne}
-                  onChange={this.handleMedicineOne}
-                  options={this.state.TabletInfoArr}
+              <div className="col-6 duration-field">
+                <label>Duration-1:</label>
+                <input
+                  type="text"
+                  name="duration1"
+                  value={this.state.duration1}
+                  onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -640,33 +648,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine2:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineTwo}
+                    onChange={this.handleMedicineTwo}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-2:</label>
                 <input
                   type="text"
-                  name="duration1"
-                  value={this.state.duration1}
+                  name="duration2"
+                  value={this.state.duration2}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine2:</label>
-              </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicineTwo}
-                  onChange={this.handleMedicineTwo}
-                  options={this.state.TabletInfoArr}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -743,33 +747,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine3:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineThree}
+                    onChange={this.handleMedicineThree}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-3:</label>
                 <input
                   type="text"
-                  name="duration2"
-                  value={this.state.duration2}
+                  name="duration3"
+                  value={this.state.duration3}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine3:</label>
-              </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicineThree}
-                  onChange={this.handleMedicineThree}
-                  options={this.state.TabletInfoArr}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -846,33 +846,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine4:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineFour}
+                    onChange={this.handleMedicineFour}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-4:</label>
                 <input
                   type="text"
-                  name="duration3"
-                  value={this.state.duration3}
+                  name="duration4"
+                  value={this.state.duration4}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine4:</label>
-              </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicineFour}
-                  onChange={this.handleMedicineFour}
-                  options={this.state.TabletInfoArr}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -949,33 +945,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine5:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineFive}
+                    onChange={this.handleMedicineFive}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-5:</label>
                 <input
                   type="text"
-                  name="duration4"
-                  value={this.state.duration4}
+                  name="duration5"
+                  value={this.state.duration5}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine5:</label>
-              </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicineFive}
-                  onChange={this.handleMedicineFive}
-                  options={this.state.TabletInfoArr}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -1052,33 +1044,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine6:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicinesix}
+                    onChange={this.handleMedicineSix}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-6:</label>
                 <input
                   type="text"
-                  name="duration5"
-                  value={this.state.duration5}
+                  name="duration6"
+                  value={this.state.duration6}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine6:</label>
-              </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={medicinesix}
-                  onChange={this.handleMedicineSix}
-                  options={this.state.TabletInfoArr}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -1155,24 +1143,9 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
-              </div>
-              <div className="col-8">
-                <input
-                  type="text"
-                  name="duration6"
-                  value={this.state.duration6}
-                  onChange={this.onChangeInput}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Medicine7:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="medicine7"
@@ -1180,12 +1153,8 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Medicine8:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="medicine8"
@@ -1194,11 +1163,9 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Diet:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="diet"
@@ -1206,40 +1173,8 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Investigations Adviced:</label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  name="invAdviced"
-                  value={this.state.invAdviced}
-                  onChange={this.onChangeInput}
-                  rows="5"
-                  cols="35"
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Physiotherapy Adviced:</label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  name="phyAdviced"
-                  value={this.state.phyAdviced}
-                  onChange={this.onChangeInput}
-                  rows="5"
-                  cols="35"
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Review:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="review"
@@ -1248,8 +1183,34 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-            <div className="row">
-              <button onClick={this.handleSubmit}>Print</button>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <label>Investigations Adviced:</label>
+                <textarea
+                  name="invAdviced"
+                  className="text-area"
+                  value={this.state.invAdviced}
+                  onChange={this.onChangeInput}
+                  rows="5"
+                  cols="35"
+                />
+              </div>
+              <div className="col-6">
+                <label>Physiotherapy Adviced:</label>
+                <textarea
+                  name="phyAdviced"
+                  className="text-area"
+                  value={this.state.phyAdviced}
+                  onChange={this.onChangeInput}
+                  rows="5"
+                  cols="35"
+                />
+              </div>
+            </div>
+            <div className="button-field">
+              <button className="next-button" onClick={this.handleSubmit}>
+                Print
+              </button>
             </div>
           </div>
         )}
