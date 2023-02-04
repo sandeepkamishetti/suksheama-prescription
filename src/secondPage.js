@@ -3,44 +3,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Select from "react-select";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Suggestion from "search-suggestion"; //Added by Sandeep for searching medicine
 import Print from "./Print";
 import TabletInfo from "./TabletData";
-
-const items = [
-  "BAKWELL AP",
-  "THIOWELL",
-  "GLENROL ",
-  "KETOROL",
-  "SEPIT MR",
-  "SETOLAC MR",
-  "FLAMINATE",
-  "PIROWELL",
-  "FLAMINATE SP",
-  "AXOVIT",
-  "ZINCOBION PLUS",
-  "ENHANCE",
-  "MYOTOP 150 MG",
-  "NUSON 150 MG",
-  "JOINT PLUS",
-  "ALTRAJOINT C2",
-  "ROSIFIT TRIO",
-  "BOROFLEX",
-  "ORCERIN C2",
-  "JOINT PLUS SACHET",
-  "RAAP DSR",
-  "RQD",
-  "QXOLE",
-  "CALBONA K2",
-  "MEGACEE",
-  "OSTEOBION K2",
-  "CLABONA XT",
-  "CISSMORE",
-  "CEFZUM",
-  "QURECLAV 625",
-  "FABUXA 80 MG",
-  "FOLAX G",
-];
 
 class SecondPage extends React.Component {
   constructor(props) {
@@ -138,68 +102,9 @@ class SecondPage extends React.Component {
     this.setState({ [name]: value });
   };
 
-  handleChange = (e) => {
-    //const value = e.target.value;
-    console.log("handleChange", e.target.value);
-    const { name, value } = e.target;
-    let filterData = [];
-    if (value) {
-      filterData = this.createData(value, items);
-    }
-    this.setState({
-      [name]: filterData,
-    });
-  };
-
   createData = (word, data) => {
     const re = new RegExp(`${word.toLowerCase()}`);
     return data.filter((item) => re.test(item.toLowerCase()));
-  };
-
-  onChangeMorning1 = () => {
-    this.setState((initialState) => ({
-      isMorning1: !initialState.isMorning1,
-    }));
-  };
-  onChangeAfterMorningFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood1: !initialState.isAfterMorningFood1,
-    }));
-  };
-  onChangeBeforeMorningFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood1: !initialState.isBeforeMorningFood1,
-    }));
-  };
-  onChangeAfternoon1 = () => {
-    this.setState((initialState) => ({
-      isAfternoon1: !initialState.isAfternoon1,
-    }));
-  };
-  onChangeAfterAfternoonFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterAfternoonFood1: !initialState.isAfterAfternoonFood1,
-    }));
-  };
-  onChangeBeforeAfternoonFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeAfternoonFood1: !initialState.isBeforeAfternoonFood1,
-    }));
-  };
-  onChangeNight1 = () => {
-    this.setState((initialState) => ({
-      isNight1: !initialState.isNight1,
-    }));
-  };
-  onChangeAfterNightFood1 = () => {
-    this.setState((initialState) => ({
-      isAfterNightFood1: !initialState.isAfterNightFood1,
-    }));
-  };
-  onChangeBeforeNightFood1 = () => {
-    this.setState((initialState) => ({
-      isBeforeNightFood1: !initialState.isBeforeNightFood1,
-    }));
   };
 
   onChangeMorning2 = () => {
@@ -251,31 +156,6 @@ class SecondPage extends React.Component {
   onChangeMorning3 = () => {
     this.setState((initialState) => ({
       isMorning3: !initialState.isMorning3,
-    }));
-  };
-  onChangeAfterMorningFood3 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood3: !initialState.isAfterMorningFood3,
-    }));
-  };
-  onChangeBeforeMorningFood3 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood3: !initialState.isBeforeMorningFood3,
-    }));
-  };
-  onChangeAfternoon3 = () => {
-    this.setState((initialState) => ({
-      isAfternoon3: !initialState.isAfternoon3,
-    }));
-  };
-  onChangeAfterAfternoonFood3 = () => {
-    this.setState((initialState) => ({
-      isAfterAfternoonFood3: !initialState.isAfterAfternoonFood3,
-    }));
-  };
-  onChangeBeforeAfternoonFood3 = () => {
-    this.setState((initialState) => ({
-      isBeforeAfternoonFood3: !initialState.isBeforeAfternoonFood3,
     }));
   };
   onChangeNight3 = () => {
@@ -345,16 +225,7 @@ class SecondPage extends React.Component {
       isMorning5: !initialState.isMorning5,
     }));
   };
-  onChangeAfterMorningFood5 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood5: !initialState.isAfterMorningFood5,
-    }));
-  };
-  onChangeBeforeMorningFood5 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood5: !initialState.isBeforeMorningFood5,
-    }));
-  };
+
   onChangeAfternoon5 = () => {
     this.setState((initialState) => ({
       isAfternoon5: !initialState.isAfternoon5,
@@ -386,21 +257,6 @@ class SecondPage extends React.Component {
     }));
   };
 
-  onChangeMorning6 = () => {
-    this.setState((initialState) => ({
-      isMorning6: !initialState.isMorning6,
-    }));
-  };
-  onChangeAfterMorningFood6 = () => {
-    this.setState((initialState) => ({
-      isAfterMorningFood6: !initialState.isAfterMorningFood6,
-    }));
-  };
-  onChangeBeforeMorningFood6 = () => {
-    this.setState((initialState) => ({
-      isBeforeMorningFood6: !initialState.isBeforeMorningFood6,
-    }));
-  };
   onChangeAfternoon6 = () => {
     this.setState((initialState) => ({
       isAfternoon6: !initialState.isAfternoon6,
@@ -432,16 +288,147 @@ class SecondPage extends React.Component {
     }));
   };
 
-  handleChangeSelect = (selectedOption) => {
-    this.setState({ selectedOption }, () =>
-      console.log(`Option selected:`, this.state.selectedOption)
-    );
+  handleMedicineOne = (medicineOne) => {
+    this.setState({ medicineOne: medicineOne });
+
+    if (medicineOne?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood1: true });
+    }
+    if (medicineOne?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood1: true });
+    }
+  };
+
+  handleMedicineTwo = (medicineTwo) => {
+    this.setState({ medicineTwo: medicineTwo });
+
+    if (medicineTwo?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood2: true });
+    }
+    if (medicineTwo?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood2: true });
+    }
+  };
+
+  handleMedicineThree = (medicineThree) => {
+    this.setState({ medicineThree: medicineThree });
+
+    if (medicineThree?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood3: true });
+    }
+    if (medicineThree?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood3: true });
+    }
+  };
+
+  handleMedicineFour = (medicineFour) => {
+    this.setState({ medicineFour: medicineFour });
+
+    if (medicineFour?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood4: true });
+    }
+    if (medicineFour?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood4: true });
+    }
+  };
+
+  handleMedicineFive = (medicineFive) => {
+    this.setState({ medicineFive: medicineFive });
+    if (medicineFive?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood5: true });
+    }
+    if (medicineFive?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood5: true });
+    }
+  };
+
+  handleMedicineSix = (medicineSix) => {
+    this.setState({ medicineSix: medicineSix });
+
+    if (medicineSix?.foodRelation?.includes(1)) {
+      this.setState({ isBeforeMorningFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(2)) {
+      this.setState({ isAfterMorningFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(3)) {
+      this.setState({ isBeforeAfternoonFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(4)) {
+      this.setState({ isAfterAfternoonFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(5)) {
+      this.setState({ isBeforeNightFood6: true });
+    }
+    if (medicineSix?.foodRelation?.includes(6)) {
+      this.setState({ isAfterNightFood6: true });
+    }
   };
 
   handleSubmit = () => {
     const state = this.state;
     const medicinesData = {
-      medicine1: state.selectedOption?.value,
+      medicine1: state.medicineOne?.value,
       isMorning1: state.isMorning1,
       isAfternoon1: state.isAfternoon1,
       isNight1: state.isNight1,
@@ -451,7 +438,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood1: state.isBeforeMorningFood1,
       isBeforeAfternoonFood1: state.isBeforeAfternoonFood1,
       isBeforeNightFood1: state.isBeforeNightFood1,
-      medicine2: document.getElementsByName("medicine2")[0].value,
+      medicine2: state.medicineTwo?.value,
       isMorning2: state.isMorning2,
       isAfternoon2: state.isAfternoon2,
       isNight2: state.isNight2,
@@ -461,7 +448,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood2: state.isBeforeMorningFood2,
       isBeforeAfternoonFood2: state.isBeforeAfternoonFood2,
       isBeforeNightFood2: state.isBeforeNightFood2,
-      medicine3: document.getElementsByName("medicine3")[0].value,
+      medicine3: state.medicineThree?.value,
       isMorning3: state.isMorning3,
       isAfternoon3: state.isAfternoon3,
       isNight3: state.isNight3,
@@ -471,7 +458,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood3: state.isBeforeMorningFood3,
       isBeforeAfternoonFood3: state.isBeforeAfternoonFood3,
       isBeforeNightFood3: state.isBeforeNightFood3,
-      medicine4: document.getElementsByName("medicine4")[0].value,
+      medicine4: state.medicineFour?.value,
       isMorning4: state.isMorning4,
       isAfternoon4: state.isAfternoon4,
       isNight4: state.isNight4,
@@ -481,7 +468,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood4: state.isBeforeMorningFood4,
       isBeforeAfternoonFood4: state.isBeforeAfternoonFood4,
       isBeforeNightFood4: state.isBeforeNightFood4,
-      medicine5: document.getElementsByName("medicine5")[0].value,
+      medicine5: state.medicineFive?.value,
       isMorning5: state.isMorning5,
       isAfternoon5: state.isAfternoon5,
       isNight5: state.isNight5,
@@ -491,7 +478,7 @@ class SecondPage extends React.Component {
       isBeforeMorningFood5: state.isBeforeMorningFood5,
       isBeforeAfternoonFood5: state.isBeforeAfternoonFood5,
       isBeforeNightFood5: state.isBeforeNightFood5,
-      medicine6: document.getElementsByName("medicine6")[0].value,
+      medicine6: state.medicineSix?.value,
       isMorning6: state.isMorning6,
       isAfternoon6: state.isAfternoon6,
       isNight6: state.isNight6,
@@ -530,29 +517,45 @@ class SecondPage extends React.Component {
     //window.scrollTo(0,0);
 
     // Using this for binding state to first medicine dropwon, duration and timings
-    const { selectedOption } = this.state;
+    const {
+      medicineOne,
+      medicineTwo,
+      medicineThree,
+      medicineFour,
+      medicineFive,
+      medicinesix,
+    } = this.state;
 
     return (
       <>
         {this.state.medicinesTab && (
           <div className="App container">
             {/*use this arrow to go back to previous page */}
-            <i class="arrow left" onClick={this.handleBack}></i>
+            <i className="arrow left" onClick={this.handleBack}></i>
             <h2>Medicines</h2>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine1:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine1:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineOne}
+                    onChange={this.handleMedicineOne}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-4">
-                {/* <input type="text" name="medicine1" value={this.state.medicine1} onChange={this.onChangeInput} /> */}
-                <Select
-                  value={selectedOption}
-                  onChange={this.handleChangeSelect}
-                  options={this.state.TabletInfoArr}
+              <div className="col-6 duration-field">
+                <label>Duration-1:</label>
+                <input
+                  type="text"
+                  name="duration1"
+                  value={this.state.duration1}
+                  onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -560,13 +563,10 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        readOnly
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           1
                         )}
-                        value={this.state.selectedOption?.foodRelation?.includes(
-                          1
-                        )}
-                        onChange={this.onChangeBeforeMorningFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -576,10 +576,10 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        readOnly
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           2
                         )}
-                        onChange={this.onChangeAfterMorningFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -594,10 +594,10 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        readOnly
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           3
                         )}
-                        onChange={this.onChangeBeforeAfternoonFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -607,10 +607,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           4
                         )}
-                        onChange={this.onChangeAfterAfternoonFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -625,10 +624,9 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           5
                         )}
-                        onChange={this.onChangeBeforeNightFood1}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -638,10 +636,10 @@ class SecondPage extends React.Component {
                     <label className="form-check-label">
                       <input
                         type="checkbox"
-                        checked={this.state.selectedOption?.foodRelation?.includes(
+                        readOnly
+                        checked={this.state.medicineOne?.foodRelation?.includes(
                           6
                         )}
-                        onChange={this.onChangeAfterNightFood1}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -650,77 +648,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine2:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineTwo}
+                    onChange={this.handleMedicineTwo}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-2:</label>
                 <input
-                  readOnly
                   type="text"
-                  name="duration1"
-                  value={this.state.selectedOption?.timing}
+                  name="duration2"
+                  value={this.state.duration2}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine2:</label>
-              </div>
-              <div className="col-8">
-                {/* <input type="text" name="medicine2" value={this.state.medicine2} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine2}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine2"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -729,7 +679,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood2}
-                        onChange={this.onChangeBeforeMorningFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -740,7 +689,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood2}
-                        onChange={this.onChangeAfterMorningFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -756,7 +704,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood2}
-                        onChange={this.onChangeBeforeAfternoonFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -767,7 +714,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood2}
-                        onChange={this.onChangeAfterAfternoonFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -783,7 +729,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood2}
-                        onChange={this.onChangeBeforeNightFood2}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -794,7 +739,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood2}
-                        onChange={this.onChangeAfterNightFood2}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -803,76 +747,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine3:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineThree}
+                    onChange={this.handleMedicineThree}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-3:</label>
                 <input
                   type="text"
-                  name="duration2"
-                  value={this.state.duration2}
+                  name="duration3"
+                  value={this.state.duration3}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine3:</label>
-              </div>
-              <div className="col-8">
-                {/* <input type="text" name="medicine3" value={this.state.medicine3} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine3}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine3"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -881,7 +778,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood3}
-                        onChange={this.onChangeBeforeMorningFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -892,7 +788,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood3}
-                        onChange={this.onChangeAfterMorningFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -908,7 +803,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood3}
-                        onChange={this.onChangeBeforeAfternoonFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -919,7 +813,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood3}
-                        onChange={this.onChangeAfterAfternoonFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -935,7 +828,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood3}
-                        onChange={this.onChangeBeforeNightFood3}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -946,7 +838,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood3}
-                        onChange={this.onChangeAfterNightFood3}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -955,76 +846,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine4:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineFour}
+                    onChange={this.handleMedicineFour}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-4:</label>
                 <input
                   type="text"
-                  name="duration3"
-                  value={this.state.duration3}
+                  name="duration4"
+                  value={this.state.duration4}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine4:</label>
-              </div>
-              <div className="col-8">
-                {/* <input type="text" name="medicine4" value={this.state.medicine4} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine4}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine4"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -1033,7 +877,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood4}
-                        onChange={this.onChangeBeforeMorningFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1044,7 +887,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood4}
-                        onChange={this.onChangeAfterMorningFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1060,7 +902,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood4}
-                        onChange={this.onChangeBeforeAfternoonFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1071,7 +912,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood4}
-                        onChange={this.onChangeAfterAfternoonFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1087,7 +927,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood4}
-                        onChange={this.onChangeBeforeNightFood4}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1098,7 +937,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood4}
-                        onChange={this.onChangeAfterNightFood4}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1107,76 +945,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine5:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicineFive}
+                    onChange={this.handleMedicineFive}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-5:</label>
                 <input
                   type="text"
-                  name="duration4"
-                  value={this.state.duration4}
+                  name="duration5"
+                  value={this.state.duration5}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine5:</label>
-              </div>
-              <div className="col-8">
-                {/* <input type="text" name="medicine5" value={this.state.medicine5} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine5}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine5"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -1185,7 +976,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood5}
-                        onChange={this.onChangeBeforeMorningFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1196,7 +986,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood5}
-                        onChange={this.onChangeAfterMorningFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1212,7 +1001,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood5}
-                        onChange={this.onChangeBeforeAfternoonFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1223,7 +1011,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood5}
-                        onChange={this.onChangeAfterAfternoonFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1239,7 +1026,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood5}
-                        onChange={this.onChangeBeforeNightFood5}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1250,7 +1036,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood5}
-                        onChange={this.onChangeAfterNightFood5}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1259,76 +1044,29 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <div className="medicine-field">
+                  <label>Medicine6:</label>
+                  <Select
+                    className="medicine-dropdown"
+                    value={medicinesix}
+                    onChange={this.handleMedicineSix}
+                    options={this.state.TabletInfoArr}
+                  />
+                </div>
               </div>
-              <div className="col-8">
+              <div className="col-6 duration-field">
+                <label>Duration-6:</label>
                 <input
                   type="text"
-                  name="duration5"
-                  value={this.state.duration5}
+                  name="duration6"
+                  value={this.state.duration6}
                   onChange={this.onChangeInput}
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Medicine6:</label>
-              </div>
-              <div className="col-8">
-                {/* <input type="text" name="medicine6" value={this.state.medicine6} onChange={this.onChangeInput} /> */}
-                <Suggestion
-                  getDisplayName={(item) => item}
-                  items={this.state.medicine6}
-                >
-                  {({
-                    getInputProps,
-                    getListItemProps,
-                    getItemProps,
-                    inputValue,
-                    selectedItem,
-                    highlightedIndex,
-                    items,
-                    isOpen,
-                    clearInputValue,
-                  }) => (
-                    <div>
-                      <input
-                        name="medicine6"
-                        {...getInputProps({
-                          placeholder: "Select medicine",
-                          onChange: this.handleChange,
-                        })}
-                      />
-                      {isOpen && (
-                        <div {...getListItemProps()}>
-                          {items.map((item, index) => (
-                            <div
-                              {...getItemProps({ item, index })}
-                              key={item}
-                              style={{
-                                backgroundColor:
-                                  highlightedIndex === index
-                                    ? "rgb(232, 232, 232)"
-                                    : "white",
-                                fontWeight:
-                                  selectedItem && selectedItem === item
-                                    ? "bold"
-                                    : "normal",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Suggestion>
-              </div>
-            </div>
-            <div className="input_fields row">
+            <div className="input_fields input-fields">
               <div className="col-4">
                 <label className="form-check-label">Morning</label>
                 <div className="row">
@@ -1337,7 +1075,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeMorningFood6}
-                        onChange={this.onChangeBeforeMorningFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1348,7 +1085,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterMorningFood6}
-                        onChange={this.onChangeAfterMorningFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1364,7 +1100,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeAfternoonFood6}
-                        onChange={this.onChangeBeforeAfternoonFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1375,7 +1110,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterAfternoonFood6}
-                        onChange={this.onChangeAfterAfternoonFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1391,7 +1125,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isBeforeNightFood6}
-                        onChange={this.onChangeBeforeNightFood6}
                         className="form-check-input pr-2"
                       />
                       Before Food
@@ -1402,7 +1135,6 @@ class SecondPage extends React.Component {
                       <input
                         type="checkbox"
                         checked={this.state.isAfterNightFood6}
-                        onChange={this.onChangeAfterNightFood6}
                         className="form-check-input pr-2"
                       />
                       After Food
@@ -1411,24 +1143,9 @@ class SecondPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Duration:</label>
-              </div>
-              <div className="col-8">
-                <input
-                  type="text"
-                  name="duration6"
-                  value={this.state.duration6}
-                  onChange={this.onChangeInput}
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Medicine7:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="medicine7"
@@ -1436,12 +1153,8 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Medicine8:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="medicine8"
@@ -1450,11 +1163,9 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-            <div className="input_fields row">
-              <div className="col-4">
+            <div className="input_fields weight-field">
+              <div className="col-6">
                 <label>Diet:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="diet"
@@ -1462,40 +1173,8 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                 />
               </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Investigations Adviced:</label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  name="invAdviced"
-                  value={this.state.invAdviced}
-                  onChange={this.onChangeInput}
-                  rows="5"
-                  cols="35"
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
-                <label>Physiotherapy Adviced:</label>
-              </div>
-              <div className="col-8">
-                <textarea
-                  name="phyAdviced"
-                  value={this.state.phyAdviced}
-                  onChange={this.onChangeInput}
-                  rows="5"
-                  cols="35"
-                />
-              </div>
-            </div>
-            <div className="input_fields row">
-              <div className="col-4">
+              <div className="col-6">
                 <label>Review:</label>
-              </div>
-              <div className="col-8">
                 <input
                   type="text"
                   name="review"
@@ -1504,8 +1183,34 @@ class SecondPage extends React.Component {
                 />
               </div>
             </div>
-            <div className="row">
-              <button onClick={this.handleSubmit}>Print</button>
+            <div className="input_fields weight-field">
+              <div className="col-6">
+                <label>Investigations Adviced:</label>
+                <textarea
+                  name="invAdviced"
+                  className="text-area"
+                  value={this.state.invAdviced}
+                  onChange={this.onChangeInput}
+                  rows="5"
+                  cols="35"
+                />
+              </div>
+              <div className="col-6">
+                <label>Physiotherapy Adviced:</label>
+                <textarea
+                  name="phyAdviced"
+                  className="text-area"
+                  value={this.state.phyAdviced}
+                  onChange={this.onChangeInput}
+                  rows="5"
+                  cols="35"
+                />
+              </div>
+            </div>
+            <div className="button-field">
+              <button className="next-button" onClick={this.handleSubmit}>
+                Print
+              </button>
             </div>
           </div>
         )}
