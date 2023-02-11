@@ -6,7 +6,6 @@ import moment from 'moment';
 
 class Print extends React.PureComponent {
   render() {
-    console.log("ravi loggin")
     console.log(this.props)
     const originalTitle = document.title;
     const date = moment(new Date()).format('DD/MM/YYYY').replace(' ', '_')

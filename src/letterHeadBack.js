@@ -200,11 +200,14 @@ class LetterHeadBack extends React.Component {
                             <pre>{medicinesInfo.phyAdviced}</pre>
                         </div>
                     </div>
+                    <div className="col-5" id="remarks">
+                            {medicinesInfo.remarks}
+                        </div>
                     <div className="row review">
                         <div className="col-5">
                             {medicinesInfo.review}
                         </div>
-                        <div className="col-2">{ /*Sandeep's changes*/ }
+                        <div className="col-2 datentime">{ /*Sandeep's changes*/ }
                             <div className="date">{date}</div>
                             <div className="time">{time.toUpperCase()}</div>
                         </div>

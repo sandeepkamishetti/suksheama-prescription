@@ -62,8 +62,8 @@ input {
 
 .patient-data-head {
   position: relative;
-  top: 295px;
-  left: 60px;
+  top: 285px;
+  left: 63px;
   font-weight: normal; /*Sandeep's changes*/ 
 }
 
@@ -81,7 +81,7 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
 
 .header-2-data {
   margin-top: 8px !important;
- margin-left: -60px !important;
+ margin-left: -80px !important;
 }
 
 .second-row {
@@ -120,6 +120,8 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
   margin-top: 100px;/*Sandeep's changes*/
   width: 550px;
   height: 115px;
+  position: relative;
+  right: 25%;
 }
 
 .fas{
@@ -149,8 +151,8 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
 
 .medicine-data-head {
   position: relative;
-  top: 170px;
-  left: 160px;
+  top: 85px;
+  left: 150px;
   font-weight: normal; /*Sandeep's changes*/ 
 }
 
@@ -194,15 +196,15 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
 }
 
 .review {
-  margin-top: 115px !important;
+  margin-top: 60px !important;
   margin-left: -25px !important;
   height: 90px;
 }
 
 .checkbox-area {
-  left: 140px;  /*Sandeep's change*/
+  left: 122px;  /*Sandeep's change*/
   position: relative;
-  top: 15px;
+  top: 12px;
 }
 
 .date {  /*Sandeep's changes*/
@@ -300,4 +302,74 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"N
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+/*Anish's changes */
+
+/*Display Arrow in second page */
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+/*Anish's changes CSS */
+
+.patient-name {
+  display: flex;
+}
+
+.sex-field {
+  margin-top: 15px;
+  display: flex;
+}
+
+.weight-field {
+  display: flex;
+  margin-top: 15px;
+}
+
+.text-area {
+  vertical-align: top
+}
+
+.button-field {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.next-button {
+  width: 100%;
+}
+
+.medicine-field {
+  display: flex;
+}
+
+.medicine-dropdown {
+  width: 100%;
+}
+
+.duration-field {
+  margin-left: 70px;
+}
+
+.input-fields {
+  margin-top: 15px;
+  display: flex;
+}
+
+#remarks {
+  margin-top: 125px !important;
+}
+
+.datentime{
+  margin-top: -55px !important;
+  margin-left: 20px;
 }
