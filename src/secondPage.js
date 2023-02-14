@@ -501,7 +501,7 @@ class SecondPage extends React.Component {
       invAdviced: state.invAdviced,
       phyAdviced: state.phyAdviced,
       review: state.review,
-      remarks: state.remarks,
+      remarks: state.remarks ? state.remarks : ".",
       patientHistory: state.patientHistory,
     };
     this.setState({
