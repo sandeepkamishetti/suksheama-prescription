@@ -290,6 +290,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineOne = (medicineOne) => {
+
+    this.setState(
+        { 
+          isBeforeMorningFood1: false,
+          isAfterMorningFood1: false,
+          isBeforeAfternoonFood1: false,
+          isAfterAfternoonFood1: false,
+          isBeforeNightFood1: false,
+          isAfterNightFood1: false
+        }
+     );
+
     this.setState({ medicineOne: medicineOne });
 
     if (medicineOne?.foodRelation?.includes(1)) {
@@ -313,6 +325,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineTwo = (medicineTwo) => {
+
+    this.setState(
+      { 
+        isBeforeMorningFood2: false,
+        isAfterMorningFood2: false,
+        isBeforeAfternoonFood2: false,
+        isAfterAfternoonFood2: false,
+        isBeforeNightFood2: false,
+        isAfterNightFood2: false
+      }
+   );
+
     this.setState({ medicineTwo: medicineTwo });
 
     if (medicineTwo?.foodRelation?.includes(1)) {
@@ -336,6 +360,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineThree = (medicineThree) => {
+
+    this.setState(
+      { 
+        isBeforeMorningFood3: false,
+        isAfterMorningFood3: false,
+        isBeforeAfternoonFood3: false,
+        isAfterAfternoonFood3: false,
+        isBeforeNightFood3: false,
+        isAfterNightFood3: false
+      }
+   );
+
     this.setState({ medicineThree: medicineThree });
 
     if (medicineThree?.foodRelation?.includes(1)) {
@@ -359,6 +395,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineFour = (medicineFour) => {
+
+    this.setState(
+      { 
+        isBeforeMorningFood4: false,
+        isAfterMorningFood4: false,
+        isBeforeAfternoonFood4: false,
+        isAfterAfternoonFood4: false,
+        isBeforeNightFood4: false,
+        isAfterNightFood4: false
+      }
+   );
+
     this.setState({ medicineFour: medicineFour });
 
     if (medicineFour?.foodRelation?.includes(1)) {
@@ -382,6 +430,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineFive = (medicineFive) => {
+
+    this.setState(
+      { 
+        isBeforeMorningFood5: false,
+        isAfterMorningFood5: false,
+        isBeforeAfternoonFood5: false,
+        isAfterAfternoonFood5: false,
+        isBeforeNightFood5: false,
+        isAfterNightFood5: false
+      }
+   );
+
     this.setState({ medicineFive: medicineFive });
     if (medicineFive?.foodRelation?.includes(1)) {
       this.setState({ isBeforeMorningFood5: true });
@@ -404,6 +464,18 @@ class SecondPage extends React.Component {
   };
 
   handleMedicineSix = (medicineSix) => {
+
+    this.setState(
+      { 
+        isBeforeMorningFood6: false,
+        isAfterMorningFood6: false,
+        isBeforeAfternoonFood6: false,
+        isAfterAfternoonFood6: false,
+        isBeforeNightFood6: false,
+        isAfterNightFood6: false
+      }
+   );
+
     this.setState({ medicineSix: medicineSix });
 
     if (medicineSix?.foodRelation?.includes(1)) {
