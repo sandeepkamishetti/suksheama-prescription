@@ -1,10 +1,30 @@
-import "./App.css";
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+//import Select from "react-select";
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import Checkbox from '@mui/material/Checkbox';
 import Print from "./Print";
 import TabletInfo from "./TabletData";
+import physiotherapySuggested from "./Physiotherapy";
+import investigationsSuggested from "./Investigations"
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
+const MenuProps = {
+  PaperProps: {
+    style: {
+      //maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 350,
+    },
+  },
+};
 
 class SecondPage extends React.Component {
   constructor(props) {
@@ -84,8 +104,8 @@ class SecondPage extends React.Component {
       medicine7: "",
       medicine8: "",
       diet: "",
-      invAdviced: "",
-      phyAdviced: "",
+      invAdviced: [],
+      phyAdviced: [],
       review: "",
       remarks: "",
       medicinesHistory: "",
@@ -289,8 +309,8 @@ class SecondPage extends React.Component {
     }));
   };
 
-  handleMedicineOne = (medicineOne) => {
-
+  handleMedicineOne = (event, medicineOne) => {
+  
     this.setState(
         { 
           isBeforeMorningFood1: false,
@@ -324,7 +344,7 @@ class SecondPage extends React.Component {
     }
   };
 
-  handleMedicineTwo = (medicineTwo) => {
+  handleMedicineTwo = (event, medicineTwo) => {
 
     this.setState(
       { 
@@ -359,7 +379,7 @@ class SecondPage extends React.Component {
     }
   };
 
-  handleMedicineThree = (medicineThree) => {
+  handleMedicineThree = (event, medicineThree) => {
 
     this.setState(
       { 
@@ -394,7 +414,7 @@ class SecondPage extends React.Component {
     }
   };
 
-  handleMedicineFour = (medicineFour) => {
+  handleMedicineFour = (event, medicineFour) => {
 
     this.setState(
       { 
@@ -429,7 +449,7 @@ class SecondPage extends React.Component {
     }
   };
 
-  handleMedicineFive = (medicineFive) => {
+  handleMedicineFive = (event, medicineFive) => {
 
     this.setState(
       { 
@@ -463,7 +483,7 @@ class SecondPage extends React.Component {
     }
   };
 
-  handleMedicineSix = (medicineSix) => {
+  handleMedicineSix = (event, medicineSix) => {
 
     this.setState(
       { 
@@ -570,8 +590,8 @@ class SecondPage extends React.Component {
       medicine7: state.medicine7,
       medicine8: state.medicine8,
       diet: state.diet,
-      invAdviced: state.invAdviced,
-      phyAdviced: state.phyAdviced,
+      invAdviced: state.invAdviced.join("\n"),
+      phyAdviced: state.phyAdviced.join("\n"),
       review: state.review,
       remarks: state.remarks ? state.remarks : ".",
       patientHistory: state.patientHistory,
@@ -610,13 +630,22 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine1:</label>
-                  <Select
+                 {/* <label>Medicine1:</label>
+                   <Select
                     className="medicine-dropdown"
                     value={medicineOne}
                     onChange={this.handleMedicineOne}
                     options={this.state.TabletInfoArr}
+                  /> */}
+
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine1" />}
+                        value={medicineOne}
+                        onChange={this.handleMedicineOne}
                   />
+
                 </div>
               </div>
               <div className="col-6 duration-field">
@@ -725,12 +754,19 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine2:</label>
+                 {/*  <label>Medicine2:</label>
                   <Select
                     className="medicine-dropdown"
                     value={medicineTwo}
                     onChange={this.handleMedicineTwo}
                     options={this.state.TabletInfoArr}
+                  /> */}
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine2" />}
+                        value={medicineTwo}
+                        onChange={this.handleMedicineTwo}
                   />
                 </div>
               </div>
@@ -824,12 +860,19 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine3:</label>
+                  {/* <label>Medicine3:</label>
                   <Select
                     className="medicine-dropdown"
                     value={medicineThree}
                     onChange={this.handleMedicineThree}
                     options={this.state.TabletInfoArr}
+                  /> */}
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine3" />}
+                        value={medicineThree}
+                        onChange={this.handleMedicineThree}
                   />
                 </div>
               </div>
@@ -923,12 +966,19 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine4:</label>
+                 {/*  <label>Medicine4:</label>
                   <Select
                     className="medicine-dropdown"
                     value={medicineFour}
                     onChange={this.handleMedicineFour}
                     options={this.state.TabletInfoArr}
+                  /> */}
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine4" />}
+                        value={medicineFour}
+                        onChange={this.handleMedicineFour}
                   />
                 </div>
               </div>
@@ -1022,12 +1072,19 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine5:</label>
+                  {/* <label>Medicine5:</label>
                   <Select
                     className="medicine-dropdown"
                     value={medicineFive}
                     onChange={this.handleMedicineFive}
                     options={this.state.TabletInfoArr}
+                  /> */}
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine5" />}
+                        value={medicineFive}
+                        onChange={this.handleMedicineFive}
                   />
                 </div>
               </div>
@@ -1121,12 +1178,19 @@ class SecondPage extends React.Component {
             <div className="input_fields weight-field">
               <div className="col-6">
                 <div className="medicine-field">
-                  <label>Medicine6:</label>
+                  {/* <label>Medicine6:</label>
                   <Select
                     className="medicine-dropdown"
                     value={medicinesix}
                     onChange={this.handleMedicineSix}
                     options={this.state.TabletInfoArr}
+                  /> */}
+                  <Autocomplete
+                        options={this.state.TabletInfoArr}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Medicine6" />}
+                        value={medicinesix}
+                        onChange={this.handleMedicineSix}
                   />
                 </div>
               </div>
@@ -1268,7 +1332,7 @@ class SecondPage extends React.Component {
             </div>
             <div className="input_fields weight-field">
               <div className="col-6">
-                <label>Investigations Adviced:</label>
+                {/* <label>Investigations Adviced:</label>
                 <textarea
                   name="invAdviced"
                   className="text-area"
@@ -1276,10 +1340,31 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                   rows="5"
                   cols="35"
-                />
+                /> */}
+                <FormControl sx={{ m: 1, width: 300 }}>
+  <InputLabel id="multiple-select-investigations">Investigations</InputLabel>
+        <Select
+          name="invAdviced"
+          labelId="multiple-select-investigations"
+          id="demo-multiple"
+          multiple
+          value={this.state.invAdviced}
+          onChange={this.onChangeInput}
+          input={<OutlinedInput label="Investigations" />}
+          renderValue={(selected) => selected.join(', ')}
+          MenuProps={MenuProps}
+        >
+          {investigationsSuggested.map((investigation) => (
+            <MenuItem key={investigation} value={investigation}>
+              <Checkbox checked={this.state.invAdviced.indexOf(investigation) > -1} />
+              <ListItemText primary={investigation} />
+            </MenuItem>
+          ))}
+        </Select>
+        </FormControl>
               </div>
               <div className="col-6">
-                <label>Physiotherapy Adviced:</label>
+               {/*  <label>Physiotherapy Adviced:</label>
                 <textarea
                   name="phyAdviced"
                   className="text-area"
@@ -1287,9 +1372,33 @@ class SecondPage extends React.Component {
                   onChange={this.onChangeInput}
                   rows="5"
                   cols="35"
-                />
+                /> */}
+<FormControl sx={{ m: 1, width: 300 }}>
+<InputLabel id="multiple-select-physiotherapy">Physiotherapy</InputLabel>
+        <Select
+          name="phyAdviced"
+          labelId="multiple-select-physiotherapy"
+          id="demo-multiple-checkbox"
+          className="text-area"
+          multiple
+          value={this.state.phyAdviced}
+          onChange={this.onChangeInput}
+          input={<OutlinedInput label="Physiotherapy" />}
+          renderValue={(selected) => selected.join(', ')}
+          MenuProps={MenuProps}
+        >
+          {physiotherapySuggested.map((physiotherapy) => (
+            <MenuItem key={physiotherapy} value={physiotherapy}>
+              <Checkbox checked={this.state.phyAdviced.indexOf(physiotherapy) > -1} />
+              <ListItemText primary={physiotherapy} />
+            </MenuItem>
+          ))}
+        </Select>
+</FormControl>
               </div>
+
             </div>
+            
             <div className="button-field">
               <button className="next-button" onClick={this.handleSubmit}>
                 Print
