@@ -120,11 +120,6 @@ const TabletInfo = [
     foodRelation: [3],
   },
   {
-    value: "TAB.MEGACEE",
-    label: "MEGACEE",
-    foodRelation: [4],
-  },
-  {
     value: "TAB.OSTEOBION K2",
     label: "OSTEOBION K2",
     foodRelation: [4],
@@ -174,6 +169,47 @@ const TabletInfo = [
     label: "MYORELAX 8 mg",
     foodRelation: [2, 6],
   },
+  {
+    value: "TAB.CARECHOLGEN",
+    label: "CARECHOLGEN",
+    foodRelation: [2, 6]
+  },
+  {
+    value: "CAP.ELECT Q 10",
+    label: "ELECT Q 10",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.CALBONA FEM",
+    label: "CALBONA FEM",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.CALBONA XT",
+    label: "CALBONA XT",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.MEGA CEE",
+    label: "MEGA CEE",
+    foodRelation: [4]
+  },
+  {
+    value: "CAP.WIN Q 10",
+    label: "WIN Q 10",
+    foodRelation: [4]
+  },
+  {
+    value: "ENHANCE GOLD SACHET WITH WATER",
+    label: "ENHANCE GOLD SACHET WITH WATER",
+    foodRelation: [4],
+  },
+  {
+    value: "CAP.ENHANCE FORTE",
+    label: "ENHANCE FORTE",
+    foodRelation: [6]
+  }
+
 ];
 
 export default TabletInfo;
