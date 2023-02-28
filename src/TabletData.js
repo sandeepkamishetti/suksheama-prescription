@@ -200,6 +200,16 @@ const TabletInfo = [
     foodRelation: [4]
   },
   {
+    value: "CAP.INDOCAP 25mg",
+    label: "INDOCAP 25mg",
+    foodRelation: [2, 6]
+  },
+  {
+    value: "CAP.DONICA 25mg",
+    label: "DONICA 25mg",
+    foodRelation: [2, 6]
+  },
+  {
     value: "ENHANCE GOLD SACHET WITH WATER",
     label: "ENHANCE GOLD SACHET WITH WATER",
     foodRelation: [4],

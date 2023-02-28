@@ -20,47 +20,10 @@ const SuggestedPhysiotherapy = [
     "GALVANIC STIMULATION ROTATOR CUFF",
     "GALVANIC STIMULATION DELTOID",
     "SPINAL EXTENSION EXERCISES",
-    "SPINAL FLEXION EXERCISES"
+    "SPINAL FLEXION EXERCISES",
+    "ACTIVE ELBOW ROM",
+    "ACTIVE WRIST ROM",
+    "ACTIVE FINGER MOVEMENTS"
 ]
 
 export default SuggestedPhysiotherapy;
-
-/* export default function Physiotherapy(){
-
-    const [personName, setPersonName] = React.useState([]);
-
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
-  };
-
-    return(
-    <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Physiotherapy Adviced</InputLabel>
-        <Select
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Tag" />}
-          renderValue={(selected) => selected.join(', ')}
-          MenuProps={MenuProps}
-        >
-          {SuggestedPhysiotherapy.map((physiotherapy) => (
-            <MenuItem key={physiotherapy} value={physiotherapy}>
-              <Checkbox checked={personName.indexOf(physiotherapy) > -1} />
-              <ListItemText primary={physiotherapy} />
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
-    )
-} */
