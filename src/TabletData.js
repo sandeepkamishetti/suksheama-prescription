@@ -246,7 +246,7 @@ const TabletInfo = [
   },
   {
     value: "TAB.TALLJOINT OD",
-    label: "ENHANCE",
+    label: "TALLJOINT OD",
     foodRelation: [4]
   }
 
