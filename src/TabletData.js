@@ -218,6 +218,36 @@ const TabletInfo = [
     value: "CAP.ENHANCE FORTE",
     label: "ENHANCE FORTE",
     foodRelation: [6]
+  },
+  {
+    value: "TAB.FLUPIMAX",
+    label: "FLUPIMAX",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.NUCOXIA P",
+    label: "NUCOXIA P",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.NUCOXIA 60",
+    label: "NUCOXIA 60",
+    foodRelation: [2,6]
+  },
+  {
+    value: "JOINTSHOT LIQUID",
+    label: "JOINTSHOT LIQUID",
+    foodRelation: [4]
+  },
+  {
+    value: "KALSITAU NASAL SPRAY",
+    label: "KALSITAU NASAL SPRAY",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.TALLJOINT OD",
+    label: "ENHANCE",
+    foodRelation: [4]
   }
 
 ];
