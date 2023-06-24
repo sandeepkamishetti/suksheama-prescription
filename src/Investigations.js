@@ -49,6 +49,7 @@ const SuggestedInvestigations = [
     "MRI RT KNEE",
     "MRI LEFT KNEE",
     "MRI LEFT ANKLE",
+    "MRI RIGHT ANKLE",
     "MRI RIGHT WRIST",
     "MRI RIGHT FOOT",
     "MRI LEFT FOOT",
