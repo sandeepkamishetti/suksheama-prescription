@@ -23,7 +23,10 @@ const SuggestedPhysiotherapy = [
     "SPINAL FLEXION EXERCISES",
     "ACTIVE ELBOW ROM",
     "ACTIVE WRIST ROM",
-    "ACTIVE FINGER MOVEMENTS"
+    "ACTIVE FINGER MOVEMENTS",
+    "AVOID OVER HEAD ACTIVITY",
+    "ISOMETRIC NECK EXERCISES",
+    "HIP ROM AND EXERCISES"    
 ]
 
 export default SuggestedPhysiotherapy;
