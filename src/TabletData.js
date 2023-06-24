@@ -240,14 +240,189 @@ const TabletInfo = [
     foodRelation: [4]
   },
   {
-    value: "KALSITAU NASAL SPRAY",
-    label: "KALSITAU NASAL SPRAY",
-    foodRelation: [4]
+    value: "KALSITAU NASAL SPRAY ONE SNIFF DAILY",
+    label: "KALSITAU NASAL SPRAY ONE SNIFF DAILY",
+    foodRelation: [0]
   },
   {
     value: "TAB.TALLJOINT OD",
     label: "TALLJOINT OD",
     foodRelation: [4]
+  },
+   {
+    value: "CAP.BRIZA D",
+    label: "BRIZA D",
+    foodRelation: [1]
+  },
+  {
+    value: "TAB.DHYAN RAAB. D",
+    label: "DHYAN RAAB. D",
+    foodRelation: [1]
+  },
+  {
+    value: "TAB.OCID QRS",
+    label: "OCID QRS",
+    foodRelation: [1]
+  },  
+  {
+    value: "TAB.NUCOXIA MR",
+    label: "NUCOXIA MR",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.COLLASHINE TRIO",
+    label: "COLLASHINE TRIO",
+    foodRelation: [2,6]
+  },
+  {
+    value: "CAP.TENDOCEL",
+    label: "TENDOCEL",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.NIXFLAM P",
+    label: "NIXFLAM P",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.THIOSTART",
+    label: "THIOSTART",
+    foodRelation: [2,6]
+  }, 
+  {
+    value: "TAB.DOLONEX DT",
+    label: "DOLONEX DT",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.ULTRACET",
+    label: "ULTRACET",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.AUGMENTIN 625",
+    label: "AUGMENTIN 625",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.LINID 600",
+    label: "LINID 600",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.LIZOLID 600",
+    label: "LIZOLID 600",
+    foodRelation: [2,6]
+  },   
+  {
+    value: "TAB.OFLOX 200",
+    label: "OFLOX 200",
+    foodRelation: [2,6]
+  },  
+  {
+    value: "TAB.MYOSONE PLUS",
+    label: "MYOSONE PLUS",
+    foodRelation: [2,6]
+  },    
+  {
+    value: "TAB.KOOLVESTIN",
+    label: "KOOLVESTIN",
+    foodRelation: [4]
+  },  
+  {
+    value: "TAB.COZIM LC",
+    label: "COZIM LC",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.AFFICAL PLUS",
+    label: "AFFICAL PLUS",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.CALEATKD",
+    label: "CALEATKD",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.CALFIX CT",
+    label: "CALFIX CT",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.SKYAXON BT",
+    label: "SKYAXON BT",
+    foodRelation: [6]
+  },
+  {
+    value: "TAB.JUBILIN M",
+    label: "JUBILIN M",
+    foodRelation: [6]
+  },
+  {
+    value: "NANOMAX GEL FOR E/A",
+    label: "NANOMAX GEL FOR E/A",
+    foodRelation: [0]
+  },
+  {
+    value: "DEKSEL WEEKLY ONCE",
+    label: "DEKSEL WEEKLY ONCE",
+    foodRelation: [6]
+  },
+  {
+    value: "CAP.MICROCID 25 MG",
+    label: "MICROCID 25 MG",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.TOFASHINE XR 11 MG",
+    label: "TOFASHINE XR 11 MG",
+    foodRelation: [2]
+  },
+  {
+    value: "TAB.LEFRA 20 MG",
+    label: "LEFRA 20 MG",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.HCQ S 200 MG",
+    label: "HCQ S 200 MG",
+    foodRelation: [4]
+  },
+  {
+    value: "THIOWELL GEL FOR E/A",
+    label: "THIOWELL GEL FOR E/A",
+    foodRelation: [0],
+  },
+  {
+    value: "DICLOTEX GEL FOR E/A",
+    label: "DICLOTEX GEL FOR E/A",
+    foodRelation: [0],
+  },
+  {
+    value: "OXALGIN NANO GEL FOR E/A",
+    label: "OXALGIN NANO GEL FOR E/A",
+    foodRelation: [0],
+  },
+  {
+    value: "TAB.ENZOTRIP",
+    label: "ENZOTRIP",
+    foodRelation: [1,3,5]
+  },
+  {
+    value: "TAB.FEBUGOOD 80 MG",
+    label: "FEBUGOOD 80 MG",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.TAXIM O 200 MG",
+    label: "TAXIM O 200 MG",
+    foodRelation: [2,6]
+  },
+  {
+    value: "GEMITROL NASAL SPRAY ONE SNIFF DAILY",
+    label: "GEMITROL NASAL SPRAY ONE SNIFF DAILY",
+    foodRelation: [0]
   }
 
 ];
