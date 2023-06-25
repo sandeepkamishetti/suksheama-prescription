@@ -423,6 +423,11 @@ const TabletInfo = [
     value: "GEMITROL NASAL SPRAY ONE SNIFF DAILY",
     label: "GEMITROL NASAL SPRAY ONE SNIFF DAILY",
     foodRelation: [0]
+  },
+  {
+    value: "TAB.COLLASHINE UC",
+    label: "COLLASHINE UC",
+    foodRelation: [4]
   }
 
 ];
