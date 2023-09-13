@@ -428,6 +428,16 @@ const TabletInfo = [
     value: "TAB.COLLASHINE UC",
     label: "COLLASHINE UC",
     foodRelation: [4]
+  },
+  {
+    value: "TAB.C3CAL",
+    label: "C3 CAL",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.PARTRAM",
+    label: "PARTRAM",
+    foodRelation: [2,6]
   }
 
 ];
