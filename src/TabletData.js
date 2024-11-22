@@ -491,7 +491,7 @@ const TabletInfo = [
   },
   {
     value: "CAP.QUREBION XT",
-    label: "QUREBION XT,
+    label: "QUREBION XT",
     foodRelation: [4]
   },
   {
