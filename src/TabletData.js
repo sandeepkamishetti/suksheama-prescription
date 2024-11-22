@@ -438,8 +438,77 @@ const TabletInfo = [
     value: "TAB.PARTRAM",
     label: "PARTRAM",
     foodRelation: [2,6]
-  }
-
+  },
+  {
+    value: "CAP.FLEXI JOINT",
+    label: "FLEXI JOINT",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.TALLJOINT OD",
+    label: "TALLJOINT OD",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.OSTCAL",
+    label: "OSTCAL",
+    foodRelation: [3]
+  },
+  {
+    value: "CAP.RABLET D",
+    label: "RABLET D",
+    foodRelation: [1]
+  },
+  {
+    value: "CAP.EXBO DSR",
+    label: "EXBO DSR",
+    foodRelation: [1]
+  },
+  {
+    value: "TAB.CARECHOL Q6",
+    label: "CARECHOL Q6",
+    foodRelation: [2,6]
+  },
+ {
+    value: "CAP.UPNURON D",
+    label: "UPNURON D",
+    foodRelation: [6]
+  },
+  {
+    value: "TAB.GOUTSTAR 40",
+    label: "GOUTSTAR 40",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.PARTRAM",
+    label: "PARTRAM",
+    foodRelation: [2,6]
+  },
+  {
+    value: "TAB.REANTRO",
+    label: "REANTRO",
+    foodRelation: [4]
+  },
+  {
+    value: "CAP.QUREBION XT",
+    label: "QUREBION XT,
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.MAGSHINE",
+    label: "MAGSHINE",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.HUMSYBEN D",
+    label: "HUMSYBEN D",
+    foodRelation: [4]
+  },
+  {
+    value: "TAB.TOFAQ 5MG",
+    label: "TOFAQ 5MG",
+    foodRelation: [2,6]
+  },
 ];
 
 export default TabletInfo;
